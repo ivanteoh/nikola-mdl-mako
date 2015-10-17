@@ -27,7 +27,7 @@ lang="${lang}">
     %if description:
     <meta name="description" content="${description|h}">
     %endif
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     %if title == blog_title:
         <title>${blog_title|h}</title>
     %else:
@@ -35,7 +35,6 @@ lang="${lang}">
     %endif
 
     ${html_stylesheets()}
-    <meta content="${theme_color}" name="theme-color">
     ${html_feedlinks()}
     <link rel="canonical" href="${abs_link(permalink)}">
 
@@ -57,10 +56,14 @@ lang="${lang}">
     %endif
 
     ${mathjax_config}
-    %if use_cdn:
-        <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    %if nikola-mdl-mako_mdl_version:
+        <script src="https://storage.googleapis.com/code.getmdl.io/${nikola-mdl-mako_mdl_version}/material.min.js"></script>
     %else:
-        <!--[if lt IE 9]><script src="${url_replacer(permalink, '/assets/js/html5.js', lang)}"></script><![endif]-->
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    %endif
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    %if nikola-mdl-mako_roboto_font:
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     %endif
 
     ${extra_head_data}
@@ -71,19 +74,23 @@ lang="${lang}">
 </%def>
 
 <%def name="html_stylesheets()">
-    %if use_bundles:
-        %if use_cdn:
-            <link href="/assets/css/all.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/rst.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/code.css" rel="stylesheet" type="text/css">
+    %if nikola-mdl-mako_mdl_version:
+        %if nikola-mdl-mako_color_scheme:
+            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/${nikola-mdl-mako_mdl_version}/material.${nikola-mdl-mako_color_scheme}.min.css">
         %else:
-            <link href="/assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/${nikola-mdl-mako_mdl_version}/material.indigo-pink.min.css">
         %endif
     %else:
-        <link href="/assets/css/rst.css" rel="stylesheet" type="text/css">
-        <link href="/assets/css/code.css" rel="stylesheet" type="text/css">
-        <link href="/assets/css/theme.css" rel="stylesheet" type="text/css">
-        %if has_custom_css:
-            <link href="/assets/css/custom.css" rel="stylesheet" type="text/css">
+        %if nikola-mdl-mako_color_scheme:
+            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.${nikola-mdl-mako_color_scheme}.min.css">
+        %else:
+            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
         %endif
+    %endif
+    %if has_custom_css:
+        <link href="/assets/css/custom.css" rel="stylesheet" type="text/css">
     %endif
     % if needs_ipython_css:
         <link href="/assets/css/ipython.min.css" rel="stylesheet" type="text/css">
