@@ -56,13 +56,13 @@ lang="${lang}">
     %endif
 
     ${mathjax_config}
-    %if nikola-mdl-mako_mdl_version:
-        <script src="https://storage.googleapis.com/code.getmdl.io/${nikola-mdl-mako_mdl_version}/material.min.js"></script>
+    %if nikola_mdl_mako_mdl_version:
+        <script src="https://storage.googleapis.com/code.getmdl.io/${nikola_mdl_mako_mdl_version}/material.min.js"></script>
     %else:
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
     %endif
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    %if nikola-mdl-mako_roboto_font:
+    %if nikola_mdl_mako_roboto_font:
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     %endif
 
@@ -76,15 +76,15 @@ lang="${lang}">
 <%def name="html_stylesheets()">
     <link href="/assets/css/rst.css" rel="stylesheet" type="text/css">
     <link href="/assets/css/code.css" rel="stylesheet" type="text/css">
-    %if nikola-mdl-mako_mdl_version:
-        %if nikola-mdl-mako_color_scheme:
-            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/${nikola-mdl-mako_mdl_version}/material.${nikola-mdl-mako_color_scheme}.min.css">
+    %if nikola_mdl_mako_mdl_version:
+        %if nikola_mdl_mako_color_scheme:
+            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/${nikola_mdl_mako_mdl_version}/material.${nikola_mdl_mako_color_scheme}.min.css">
         %else:
-            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/${nikola-mdl-mako_mdl_version}/material.indigo-pink.min.css">
+            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/${nikola_mdl_mako_mdl_version}/material.indigo-pink.min.css">
         %endif
     %else:
-        %if nikola-mdl-mako_color_scheme:
-            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.${nikola-mdl-mako_color_scheme}.min.css">
+        %if nikola_mdl_mako_color_scheme:
+            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.${nikola_mdl_mako_color_scheme}.min.css">
         %else:
             <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
         %endif
