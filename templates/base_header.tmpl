@@ -33,22 +33,21 @@
 
 <%def name="html_navigation_links()">
     <div class="mdl-layout__drawer">
-    % if show_blog_title:
-        <span class="mdl-layout-title">${blog_title|h}</span>
-    % endif
-    <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="#">Hello</a>
-    %for url, text in navigation_links[lang]:
-        % if isinstance(url, tuple):
-            ${text}
-        % else:
-            <a class="mdl-navigation__link" href="${url}">${text}</a></li>
+        % if show_blog_title:
+            <span class="mdl-layout-title">${blog_title|h}</span>
         % endif
-    %endfor
-    ${template_hooks['menu']()}
-    ${template_hooks['menu_alt']()}
-    </ul>
-    </nav>
+        <nav class="mdl-navigation">
+            %for url, text in navigation_links[lang]:
+                % if isinstance(url, tuple):
+                    ${text}
+                % else:
+                    <a class="mdl-navigation__link" href="${url}">${text}</a>
+                % endif
+            %endfor
+            ${template_hooks['menu']()}
+            ${template_hooks['menu_alt']()}
+        </nav>
+    </div>
 </%def>
 
 <%def name="html_translation_header()">
