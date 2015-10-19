@@ -1,19 +1,24 @@
 ## -*- coding: utf-8 -*-
 <%def name="html_pager()">
     %if prevlink or nextlink:
-        <nav class="postindexpager">
-        <ul class="pager">
-        %if prevlink:
-            <li class="previous">
-                <a href="${prevlink}" rel="prev">${messages("Newer posts")}</a>
-            </li>
-        %endif
-        %if nextlink:
-            <li class="next">
-                <a href="${nextlink}" rel="next">${messages("Older posts")}</a>
-            </li>
-        %endif
-        </ul>
+        <nav class="mdl-cell mdl-cell--12-col">
+            <div class="section-spacer"></div>
+            %if prevlink:
+                <a href="${prevlink}" class="theme-nav__button" rel="prev" title="${messages('Newer posts')}">
+                  ${messages("Newer posts")}
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                    <i class="material-icons" role="presentation">arrow_backward</i>
+                  </button>
+                </a>
+            %endif
+            %if nextlink:
+                <a href="${nextlink}" class="theme-nav__button" rel="next" title="${messages("Older posts")}">
+                  ${messages("Older posts")}
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                    <i class="material-icons" role="presentation">arrow_forward</i>
+                  </button>
+                </a>
+            %endif
         </nav>
     %endif
 </%def>
