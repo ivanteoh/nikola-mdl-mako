@@ -24,18 +24,25 @@
 
 <%def name="html_pager(post)">
     %if post.prev_post or post.next_post:
-        <ul class="pager hidden-print">
-        %if post.prev_post:
-            <li class="previous">
-                <a href="${post.prev_post.permalink()}" rel="prev" title="${post.prev_post.title()|h}">${messages("Previous post")}</a>
-            </li>
-        %endif
-        %if post.next_post:
-            <li class="next">
-                <a href="${post.next_post.permalink()}" rel="next" title="${post.next_post.title()|h}">${messages("Next post")}</a>
-            </li>
-        %endif
-        </ul>
+        <nav class="mdl-cell mdl-cell--12-col pager hidden-print">
+            <div class="section-spacer"></div>
+            %if prevlink:
+                <a href="${post.prev_post.permalink()}" class="theme-nav__button previous" rel="prev" title="${post.prev_post.title()|h}">
+                  ${messages("Previous post")}
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                    <i class="material-icons" role="presentation">arrow_backward</i>
+                  </button>
+                </a>
+            %endif
+            %if nextlink:
+                <a href="${post.next_post.permalink()}" class="theme-nav__button next" rel="next" title="${post.next_post.title()|h}">
+                  ${messages("Next post")}
+                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                    <i class="material-icons" role="presentation">arrow_forward</i>
+                  </button>
+                </a>
+            %endif
+        </nav>
     %endif
 </%def>
 
