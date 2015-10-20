@@ -97,15 +97,26 @@ body .theme-blog {
 .theme-blog .mdl-card__actions:first-child {
   margin-left: 0;
 }
-.theme-blog .metadata {
-  box-sizing: border-box;
-  padding: 16px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  height: auto;
+
+.theme-blog {
+
+	.metadata {
+  	box-sizing: border-box;
+  	padding: 16px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	height: auto;
+
+		.dateline {
+			margin-left: 20px;
+		}
+
+	}
+
 }
+
 
 .theme-blog .theme-blog__posts > .theme-nav {
   margin: 12px 15px;
