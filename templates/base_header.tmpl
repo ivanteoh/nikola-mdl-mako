@@ -3,6 +3,11 @@
 
 <%def name="html_header()">
     <header id="header" class="mdl-layout__header">
+        %if logo_url:
+            <div id="brand" class="mdl-layout-icon">
+                <img src="${logo_url}" alt="${blog_title|h}" id="logo">
+            </div>
+        %endif
         <div class="mdl-layout__header-row">
             ${html_site_title()}
             <div class="mdl-layout-spacer"></div>
@@ -11,24 +16,17 @@
                     ${search_form}
                 </div>
             %endif
+            ${html_translation_header()}
         </div>
-        ${html_translation_header()}
     </header>
     ${html_navigation_links()}
     ${template_hooks['page_header']()}
 </%def>
 
 <%def name="html_site_title()">
-    %if logo_url:
-        <div class="mdl-layout-icon">
-            <img src="${logo_url}" alt="${blog_title|h}" id="logo">
-        </div>
-    %endif
-    <h1 id="brand"><a href="${abs_link(_link("root", None, lang))}" title="${blog_title|h}" rel="home">
-        % if show_blog_title:
-            <span id="blog-title" class="mdl-layout-title">${blog_title|h}</span>
-        % endif
-    </a></h1>
+    % if show_blog_title:
+        <span id="blog-title" class="mdl-layout-title">${blog_title|h}</span>
+    % endif
 </%def>
 
 <%def name="html_navigation_links()">
@@ -38,11 +36,11 @@
         % endif
         <nav class="mdl-navigation">
             %for url, text in navigation_links[lang]:
-                % if isinstance(url, tuple):
-                    ${text}
-                % else:
+                % if rel_link(permalink, url) == "#":
+                    <a class="mdl-navigation__link active" href="${permalink}">${text} <span class="sr-only">${messages("(active)", lang)}</span></a>
+                %else:
                     <a class="mdl-navigation__link" href="${url}">${text}</a>
-                % endif
+                %endif
             %endfor
             ${template_hooks['menu']()}
             ${template_hooks['menu_alt']()}
@@ -52,9 +50,14 @@
 
 <%def name="html_translation_header()">
     %if len(translations) > 1:
-        <div id="toptranslations">
-            <h2>${messages("Languages:")}</h2>
-            ${base.html_translations()}
-        </div>
+        <button id="toptranslations"
+                class="mdl-button mdl-js-button mdl-button--icon">
+            <i class="material-icons">more_vert</i>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+            for="toptranslations">
+            <li class="mdl-menu__item">${messages("Languages:")}</li>
+            <li class="mdl-menu__item">${base.html_translations()}</li>
+        </ul>
     %endif
 </%def>
