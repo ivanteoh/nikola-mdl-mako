@@ -28,24 +28,22 @@
 </%block>
 
 <%block name="content">
-<div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp post-${post.meta('type')} h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<div class="theme-blog__posts mdl-grid">
+<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div class="mdl-card__media post-${post.meta('type')}"></div>
     ${pheader.html_post_header()}
-    <div class="e-content entry-content" itemprop="articleBody text">
+    <div class="mdl-card__supporting-text e-content entry-content" itemprop="articleBody text">
     ${post.text()}
     </div>
-    <aside class="postpromonav">
-    <nav>
-    ${helper.html_tags(post)}
-    ${helper.html_pager(post)}
-    </nav>
-    </aside>
     % if not post.meta('nocomments') and site_has_comments:
-        <section class="comments hidden-print">
+    <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments hidden-print">
         <h2>${messages("Comments")}</h2>
         ${comments.comment_form(post.permalink(absolute=True), post.title(), post._base_path)}
-        </section>
+    </div>
     % endif
     ${helper.mathjax_script(post)}
 </div>
+${helper.html_pager(post)}
 ${comments.comment_link_script()}
+</div>
 </%block>

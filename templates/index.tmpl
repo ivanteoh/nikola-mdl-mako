@@ -28,17 +28,17 @@
         ${post.text(teaser_only=False)}
         %endif
         </div>
-        <div class="mdl-card__supporting-text metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+        <div class="mdl-card__supporting-text meta">
+            <p class="metadata byline author vcard"><span class="byline-name fn">
             % if author_pages_generated:
                 <a href="${_link('author', post.author())}">${post.author()|h}</a>
             % else:
                 ${post.author()|h}
             % endif
             </span></p>
-            <p class="dateline"><time class="published dt-published" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time></p>
+            <p class="metadata dateline"><time class="published dt-published" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time></p>
             % if not post.meta('nocomments') and site_has_comments:
-                <p class="commentline">${comments.comment_link(post.permalink(), post._base_path)}
+                <p class="metadata commentline">${comments.comment_link(post.permalink(), post._base_path)}
             % endif
         </div>
     </div>

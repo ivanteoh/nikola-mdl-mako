@@ -100,7 +100,7 @@ body .theme-blog {
 
 .theme-blog {
 
-	.metadata {
+	.meta {
   	box-sizing: border-box;
   	padding: 16px;
   	display: flex;
@@ -109,7 +109,7 @@ body .theme-blog {
   	justify-content: flex-start;
   	height: auto;
 
-		.dateline {
+		.metadata {
 			margin-left: 20px;
 		}
 
@@ -170,17 +170,17 @@ body .theme-blog {
   height: 280px;
 }
 
-.theme-blog--blogpost .metadata > * {
+.theme-blog--blogpost .meta > * {
   align-items: center;
 }
 
-.theme-blog--blogpost .metadata + .mdl-card__supporting-text {
+.theme-blog--blogpost .meta + .mdl-card__supporting-text {
   border: 0;
   display: flex;
   flex-direction: column;
 }
 
-.theme-blog--blogpost .metadata + .mdl-card__supporting-text p {
+.entry-content p {
   max-width: 512px;
   margin: 16px auto;
   font-size: 16px;
