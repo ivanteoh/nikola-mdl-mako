@@ -38,7 +38,7 @@
             </span></p>
             <p class="metadata dateline"><time class="published dt-published" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time></p>
             % if not post.meta('nocomments') and site_has_comments:
-                <p class="metadata commentline">${comments.comment_link(post.permalink(), post._base_path)}
+                <p class="metadata commentline">${comments.comment_link(post.permalink(), post._base_path)}</p>
             % endif
         </div>
     </div>
