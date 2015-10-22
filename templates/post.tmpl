@@ -29,7 +29,8 @@
 
 <%block name="content">
 <div class="theme-blog__posts mdl-grid">
-<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
+<div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col h-entry hentry postpage">
+    <article itemscope="itemscope" itemtype="http://schema.org/Article">
     <div class="mdl-card__media post-${post.meta('type')}"></div>
     ${pheader.html_post_header()}
     <div class="mdl-card__supporting-text e-content entry-content" itemprop="articleBody text">
@@ -42,6 +43,7 @@
     </div>
     % endif
     ${helper.mathjax_script(post)}
+    </article>
 </div>
 ${helper.html_pager(post)}
 ${comments.comment_link_script()}
