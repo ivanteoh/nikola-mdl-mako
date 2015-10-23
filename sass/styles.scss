@@ -35,6 +35,13 @@
 		}
 	}
 
+	.theme-blog__title {
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+
 	.theme-blog__posts {
 		max-width: 900px;
 	  padding: 0;
