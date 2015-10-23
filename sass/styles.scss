@@ -263,15 +263,37 @@
 	          justify-content: flex-start;
 	  height: auto;
 
-		> * {
-		  -webkit-box-align: center;
-		  -webkit-align-items: center;
-		      -ms-flex-align: center;
-		          align-items: center;
+		> .meta__favorites {
+		  -webkit-box-orient: horizontal;
+		  -webkit-box-direction: normal;
+		  -webkit-flex-direction: row;
+		      -ms-flex-direction: row;
+		          flex-direction: row;
+		  margin: 0 8px;
+		  font-size: 13px;
+		  font-weight: 500;
+
+			.material-icons {
+			  font-size: 2em;
+			  cursor: pointer;
+			  margin-left: 12px;
+			}
 		}
 
-		.metadata {
-			margin-left: 20px;
+		> *:first-child {
+		  margin-right: 16px;
+		}
+
+		> * {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
 		}
 
 		+ .mdl-card__supporting-text {

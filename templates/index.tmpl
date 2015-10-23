@@ -32,20 +32,26 @@
         %endif
         </div>
         <div class="mdl-card__supporting-text meta">
-            <p class="metadata byline author vcard">
-                <span class="byline-name fn">
-                % if author_pages_generated:
-                    <a href="${_link('author', post.author())}">${post.author()|h}</a>
-                % else:
-                    ${post.author()|h}
-                % endif
+            <div><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">${"".join([x[0].upper() for x in post.author().split()])}</button></div>
+            <div>
+                <strong class="metadata byline author vcard">
+                    <span class="byline-name fn">
+                    % if author_pages_generated:
+                        <a href="${_link('author', post.author())}">${post.author()|h}</a>
+                    % else:
+                        ${post.author()|h}
+                    % endif
+                    </span>
+                </strong>
+                <span class="metadata dateline">
+                    <time class="published dt-published" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time>
                 </span>
-            </p>
-            <p class="metadata dateline">
-                <time class="published dt-published" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time>
-            </p>
+            </div>
+            <div class="section-spacer"></div>
             % if not post.meta('nocomments') and site_has_comments:
-            <p class="metadata commentline">${comments.comment_link(post.permalink(), post._base_path)}</p>
+            <div>
+                <span class="metadata commentline">${comments.comment_link(post.permalink(), post._base_path)}</span>
+            </div>
             % endif
         </div>
         </article>

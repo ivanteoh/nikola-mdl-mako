@@ -26,33 +26,47 @@
 </%def>
 
 <%def name="html_sourcelink()">
+    <div>
     % if show_sourcelink:
-        <p class="metadata sourceline"><a href="${post.source_link()}" id="sourcelink">${messages("Source")}</a></p>
+        <span class="metadata sourceline"><a href="${post.source_link()}" id="sourcelink">${messages("Source")}</a></span>
     % endif
+    </div>
 </%def>
 
 <%def name="html_post_header()">
     ${html_title()}
     <div class="mdl-card__supporting-text meta">
-        <p class="metadata byline author vcard"><span class="byline-name fn">
-            % if author_pages_generated:
-                <a href="${_link('author', post.author())}">${post.author()|h}</a>
-            % else:
-                ${post.author()|h}
-            % endif
-        </span></p>
-        <p class="metadata dateline"><time class="published dt-published" datetime="${post.formatted_date('webiso')}" itemprop="datePublished" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time></p>
-        % if not post.meta('nocomments') and site_has_comments:
-            <p class="metadata commentline">${comments.comment_link(post.permalink(), post._base_path)}</p>
-        % endif
+        <div><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">${"".join([x[0].upper() for x in post.author().split()])}</button></div>
+        <div>
+            <strong class="metadata byline author vcard">
+                <span class="byline-name fn">
+                % if author_pages_generated:
+                    <a href="${_link('author', post.author())}">${post.author()|h}</a>
+                % else:
+                    ${post.author()|h}
+                % endif
+                </span>
+            </strong>
+            <span class="metadata dateline">
+                <time class="published dt-published" datetime="${post.formatted_date('webiso')}" itemprop="datePublished" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}
+                </time>
+            </span>
+        </div>
         ${html_sourcelink()}
         % if post.meta('link'):
-            <p class="metadata linkline"><a href="${post.meta('link')}">${messages("Original site")}</a></p>
+        <div>
+            <span class="metadata linkline"><a href="${post.meta('link')}">${messages("Original site")}</a></span>
+        </div>
         % endif
         %if post.description():
             <meta name="description" itemprop="description" content="${post.description()|h}">
         %endif
         <div class="section-spacer"></div>
+        <div>
+            % if not post.meta('nocomments') and site_has_comments:
+                <span class="metadata commentline">${comments.comment_link(post.permalink(), post._base_path)}</span>
+            % endif
+        </div>
         ${helper.html_tags(post)}
     </div>
     ${html_translations(post)}
