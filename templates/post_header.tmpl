@@ -62,11 +62,14 @@
             <meta name="description" itemprop="description" content="${post.description()|h}">
         %endif
         <div class="section-spacer"></div>
-        <div>
-            % if not post.meta('nocomments') and site_has_comments:
-                <span class="metadata commentline">${comments.comment_link(post.permalink(), post._base_path)}</span>
-            % endif
+        % if not post.meta('nocomments') and site_has_comments:
+        <div class="meta__comment">
+            <span class="metadata commentline">
+                <i class="material-icons">comment</i>
+                ${comments.comment_link(post.permalink(), post._base_path)}
+            </span>
         </div>
+        % endif
         ${helper.html_tags(post)}
     </div>
     ${html_translations(post)}

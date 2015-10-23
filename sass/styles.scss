@@ -263,7 +263,7 @@
 	          justify-content: flex-start;
 	  height: auto;
 
-		> .meta__favorites {
+		> .meta__comment {
 		  -webkit-box-orient: horizontal;
 		  -webkit-box-direction: normal;
 		  -webkit-flex-direction: row;
@@ -277,6 +277,10 @@
 			  font-size: 2em;
 			  cursor: pointer;
 			  margin-left: 12px;
+			}
+
+			a {
+				text-decoration: none;
 			}
 		}
 
