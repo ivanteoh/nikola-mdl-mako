@@ -222,6 +222,7 @@
 		~ .mdl-card__supporting-text {
 		  min-height: 64px;
 		}
+
 	}
 
 	.mdl-card__supporting-text {
@@ -352,6 +353,18 @@
 		  	margin: 16px auto;
 		  	font-size: 16px;
 		  	line-height: 28px;
+			}
+		}
+	}
+
+	.thumbnails {
+		.mdl-card {
+			min-height: 135px;
+			.mdl-card__media {
+				margin: auto;
+				img {
+					object-fit: cover;
+				}
 			}
 		}
 	}

@@ -5,6 +5,8 @@
 <%block name="sourcelink"></%block>
 
 <%block name="content">
+<div class="theme-blog__page theme-card mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
     ${ui.bar(crumbs)}
     %if title:
     <h1>${title|h}</h1>
@@ -23,16 +25,26 @@
     </ul>
     %endif
     %if photo_array:
-    <ul class="thumbnails">
+    <div class="mdl-grid thumbnails">
         %for image in photo_array:
-            <li><a href="${image['url']}" class="thumbnail image-reference" title="${image['title']}">
-                <img src="${image['url_thumb']}" alt="${image['title']|h}" /></a>
+            <div class="mdl-card mdl-cell mdl-cell--3-col mdl-shadow--2dp">
+                <div class="mdl-card__media mdl-color--white">
+                    <a href="${image['url']}" class="thumbnail image-reference" title="${image['title']}">
+                        <img src="${image['url_thumb']}" alt="${image['title']|h}" />
+                    </a>
+                </div>
+                <div class="mdl-card__actions">
+                  <a class="mdl-button mdl-js-button mdl-js-ripple-effect" title="${image['title']}" href="${image['url']}">${image['title']}</a>
+                </div>
+            </div>
         %endfor
-    </ul>
+    </div>
     %endif
 %if site_has_comments and enable_comments:
     ${comments.comment_form(None, permalink, title)}
 %endif
+</div>
+</div>
 </%block>
 
 <%block name="extra_head">

@@ -2,18 +2,22 @@
 
 <%def name="bar(crumbs)">
 %if crumbs:
-<nav class="breadcrumbs">
-<ul class="breadcrumb">
-    % for link, text in crumbs:
-        % if text != index_file:
+<div class="theme-crumbs mdl-color-text--grey-500">
+    % for idx, [link, text] in enumerate(crumbs):
+        % if not idx:
             % if link == '#':
-                <li>${text.rsplit('.html', 1)[0]}</li>
+                ${text.rsplit('.html', 1)[0]}
             % else:
-                <li><a href="${link}">${text}</a></li>
+                <a href="${link}">${text}</a>
+            % endif
+        % else:
+            % if link == '#':
+                 &nbsp;&gt;&nbsp;${text.rsplit('.html', 1)[0]}
+            % else:
+                 &nbsp;&gt;&nbsp;<a href="${link}">${text}</a>
             % endif
         % endif
     % endfor
-</ul>
-</nav>
+</div>
 %endif
 </%def>
