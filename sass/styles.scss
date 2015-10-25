@@ -54,7 +54,7 @@
 		}
 	}
 
-	.theme-blog__posts {
+	.theme-card {
 		max-width: 900px;
 	  padding: 0;
 	  display: -webkit-box;
@@ -340,12 +340,14 @@
 
 }
 
-.entry-content {
-	p {
-  	max-width: 512px;
-  	margin: 16px auto;
-  	font-size: 16px;
-  	line-height: 28px;
+.theme-blog__post {
+	.entry-content {
+		p {
+	  	max-width: 512px;
+	  	margin: 16px auto;
+	  	font-size: 16px;
+	  	line-height: 28px;
+		}
 	}
 }
 
