@@ -6,11 +6,11 @@
 
 <%block name="content">
 <div class="theme-blog__page theme-card mdl-grid">
-    <div class="mdl-card mdl-cell mdl-cell--12-col storypage">
-        <article itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
             ${pheader.html_title()}
             ${pheader.html_translations(post)}
-            <div class="mdl-card__supporting-text e-content entry-content" itemprop="articleBody text">
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text e-content entry-content" itemprop="articleBody text">
                 ${post.text()}
             </div>
             %if site_has_comments and enable_comments and not post.meta('nocomments'):

@@ -20,6 +20,27 @@
 	clip: auto;
 }
 
+.logo {
+  display: block;
+  text-indent: -9999px;
+  width: 26px;
+  height: 26px;
+  background: url(../images/rss-box.svg);
+  background-size: 26px 26px;
+}
+
+.mdl-menu {
+	.tag {
+		text-decoration: none;
+	}
+}
+
+.postlist {
+	.listdate {
+		margin-right: 10px;
+	}
+}
+
 /* demo-blog */
 .theme-blog {
 
@@ -300,26 +321,39 @@
 			        flex-direction: column;
 		}
 
-		+ .mdl-card__supporting-text {
-		  border: 0;
-		  display: -webkit-box;
-		  display: -webkit-flex;
-		  display: -ms-flexbox;
-		  display: flex;
-		  -webkit-box-orient: vertical;
-		  -webkit-box-direction: normal;
-		  -webkit-flex-direction: column;
-		      -ms-flex-direction: column;
-		          flex-direction: column;
+	}
 
-			p {
-			  max-width: 512px;
-			  margin: 16px auto;
-			  font-size: 16px;
-			  line-height: 28px;
+	.theme-blog__post {
+		.meta {
+			+ .mdl-card__supporting-text {
+			  border: 0;
+			  display: -webkit-box;
+			  display: -webkit-flex;
+			  display: -ms-flexbox;
+			  display: flex;
+			  -webkit-box-orient: vertical;
+			  -webkit-box-direction: normal;
+			  -webkit-flex-direction: column;
+			      -ms-flex-direction: column;
+			          flex-direction: column;
+
+				p {
+				  max-width: 512px;
+				  margin: 16px auto;
+				  font-size: 16px;
+				  line-height: 28px;
+				}
 			}
 		}
 
+		.entry-content {
+			p {
+		  	max-width: 512px;
+		  	margin: 16px auto;
+		  	font-size: 16px;
+		  	line-height: 28px;
+			}
+		}
 	}
 
 	/* footer */
@@ -340,16 +374,7 @@
 
 }
 
-.theme-blog__post {
-	.entry-content {
-		p {
-	  	max-width: 512px;
-	  	margin: 16px auto;
-	  	font-size: 16px;
-	  	line-height: 28px;
-		}
-	}
-}
+
 
 /* Fixes for IE 10 */
 .mdl-grid {

@@ -15,8 +15,8 @@
 <%block name="content_header"></%block>
 <div class="postindex">
 % for post in posts:
-    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp h-entry">
-        <article>
+    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+        <article class="h-entry">
         <div class="mdl-card__media post-${post.meta('type')}"></div>
         <div class="mdl-card__title">
             <header>
@@ -24,14 +24,14 @@
             </header>
         </div>
         %if index_teasers:
-        <div class="mdl-card__supporting-text p-summary entry-summary">
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text p-summary entry-summary">
         ${post.text(teaser_only=True)}
         %else:
-        <div class="mdl-card__supporting-text e-content entry-content">
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text e-content entry-content">
         ${post.text(teaser_only=False)}
         %endif
         </div>
-        <div class="mdl-card__supporting-text meta">
+        <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
             <div><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">${"".join([x[0].upper() for x in post.author().split()])}</button></div>
             <div>
                 <strong class="metadata byline author vcard">

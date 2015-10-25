@@ -29,11 +29,11 @@
 
 <%block name="content">
 <div class="theme-blog__post theme-card mdl-grid">
-    <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col h-entry hentry postpage">
-        <article itemscope="itemscope" itemtype="http://schema.org/Article">
+    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+        <article class="h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="mdl-card__media post-${post.meta('type')}"></div>
             ${pheader.html_post_header()}
-            <div class="mdl-card__supporting-text e-content entry-content" itemprop="articleBody text">
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text e-content entry-content" itemprop="articleBody text">
                 ${post.text()}
             </div>
             % if not post.meta('nocomments') and site_has_comments:
