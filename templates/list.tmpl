@@ -2,21 +2,29 @@
 <%inherit file="base.tmpl"/>
 
 <%block name="content">
-<article class="listpage">
-    <header>
-        <h1>${title|h}</h1>
-    </header>
-    %if items:
-    <ul class="postlist">
-    % for text, link, count in items:
-        <li><a href="${link}">${text|h}</a>
-        % if count:
-            (${count})
-        % endif
-    % endfor
-    </ul>
-    %else:
-    <p>${messages("Nothing found.")}</p>
-    %endif
-</article>
+<div class="theme-blog__page theme-card mdl-grid">
+    <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <article class="listpage">
+            <div class="mdl-card__title">
+                <header>
+                    <h1>${title|h}</h1>
+                </header>
+            </div>
+            <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+                %if items:
+                <ul class="postlist">
+                % for text, link, count in items:
+                    <li><a href="${link}">${text|h}</a>
+                    % if count:
+                        (${count})
+                    % endif
+                % endfor
+                </ul>
+                %else:
+                <p>${messages("Nothing found.")}</p>
+                %endif
+            </div>
+        </article>
+    </div>
+</div>
 </%block>

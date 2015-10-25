@@ -2,18 +2,24 @@
 <%inherit file="base.tmpl"/>
 
 <%block name="content">
-<article class="listpage">
-    <header>
-        <h1>${title|h}</h1>
-    </header>
-    %if posts:
-    <ul class="postlist">
-    % for post in posts:
-        <li><a href="${post.permalink()}" class="listtitle">${post.title()|h}</a> <time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time></li>
-    % endfor
-    </ul>
-    %else:
-    <p>${messages("No posts found.")}</p>
-    %endif
-</article>
+<div class="theme-blog__page theme-card mdl-grid">
+    <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <article class="listpage">
+            <div class="mdl-card__title">
+                <header>
+                    <h1>${title|h}</h1>
+                </header>
+            </div>
+            %if posts:
+            <ul class="postlist">
+            % for post in posts:
+                <li><time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time><a href="${post.permalink()}" class="listtitle">${post.title()|h}</a></li>
+            % endfor
+            </ul>
+            %else:
+            <p>${messages("No posts found.")}</p>
+            %endif
+        </article>
+    </div>
+</div>
 </%block>
