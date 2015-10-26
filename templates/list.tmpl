@@ -13,15 +13,12 @@
             <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
                 %if items:
                 <ul class="postlist">
-                % for text, link, count in items:
-                    <li>
-                    % if count:
-                        <a href="${link}" class="mdl-badge" data-badge="${count}">${text|h}</a>
-                    % else:
-                        <a href="${link}">${text|h}</a>    
-                    % endif
-                    </li>
-                % endfor
+                  % for text, link, count in items:
+                      <li><a href="${link}">${text|h}</a>
+                      % if count:
+                          (${count})
+                      % endif
+                  % endfor
                 </ul>
                 %else:
                 <p>${messages("Nothing found.")}</p>
