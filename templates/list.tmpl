@@ -14,10 +14,13 @@
                 %if items:
                 <ul class="postlist">
                 % for text, link, count in items:
-                    <li><a href="${link}">${text|h}</a>
+                    <li>
                     % if count:
-                        (${count})
+                        <a href="${link}" class="mdl-badge" data-badge="${count}">${text|h}</a>
+                    % else:
+                        <a href="${link}">${text|h}</a>    
                     % endif
+                    </li>
                 % endfor
                 </ul>
                 %else:
