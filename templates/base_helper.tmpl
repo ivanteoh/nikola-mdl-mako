@@ -87,12 +87,21 @@ lang="${lang}">
             <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
         %endif
     %endif
-    <link href="/assets/css/rst.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/code.css" rel="stylesheet" type="text/css">
-    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
-    %if has_custom_css:
-        <link href="/assets/css/custom.css" rel="stylesheet" type="text/css">
+    %if use_bundles:
+        %if use_cdn:
+            <link href="/assets/css/all.css" rel="stylesheet" type="text/css">
+        %else:
+            <link href="/assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+        %endif
+    %else:
+        <link href="/assets/css/rst.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/code.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+        %if has_custom_css:
+            <link href="/assets/css/custom.css" rel="stylesheet" type="text/css">
+        %endif
     %endif
+
     % if needs_ipython_css:
         <link href="/assets/css/ipython.min.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">

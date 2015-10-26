@@ -11,10 +11,18 @@
                 <a href="${link}">${text}</a>
             % endif
         % else:
-            % if link == '#':
-                 &nbsp;&gt;&nbsp;${text.rsplit('.html', 1)[0]}
+            % if breadcrumb_separator:
+                % if link == '#':
+                     &nbsp;${breadcrumb_separator}&nbsp;${text.rsplit('.html', 1)[0]}
+                % else:
+                     &nbsp;${breadcrumb_separator}&nbsp;<a href="${link}">${text}</a>
+                % endif              
             % else:
-                 &nbsp;&gt;&nbsp;<a href="${link}">${text}</a>
+                % if link == '#':
+                     &nbsp;&gt;&nbsp;${text.rsplit('.html', 1)[0]}
+                % else:
+                     &nbsp;&gt;&nbsp;<a href="${link}">${text}</a>
+                % endif
             % endif
         % endif
     % endfor

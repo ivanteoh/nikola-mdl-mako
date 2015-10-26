@@ -6,6 +6,7 @@ GLOBAL_CONTEXT = {
     "color_scheme": "indigo-pink",
     "roboto_font": False,
     "mega_footer": False,
+    "breadcrumb_separator": "/",
 }
 
 Config not used
