@@ -3,7 +3,7 @@
 
 <%def name="html_footer()">
     %if content_footer:
-        %if nikola_mdl_mako_mega_footer:
+        %if mega_footer:
             <footer id="footer" class="mdl-mega-footer">
                 ${content_footer}
                 ${template_hooks['page_footer']()}
