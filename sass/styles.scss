@@ -313,6 +313,23 @@ a {
 
 	}
 
+	.theme-blog__posts {
+		.mdl-card {
+			overflow: visible;
+    	z-index: 10;
+			margin-top: 50px;
+
+			> button {
+			  position: absolute;
+			  top: 0;
+			  right: 28px;
+			  -webkit-transform: translate(0px, -28px);
+			      -ms-transform: translate(0px, -28px);
+			          transform: translate(0px, -28px);
+			}
+		}
+	}
+
 	.theme-blog__post {
 		.meta {
 			+ .mdl-card__supporting-text {
