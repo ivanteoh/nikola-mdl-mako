@@ -15,7 +15,7 @@
 <%block name="content_header"></%block>
 <div class="postindex">
 % for post in posts:
-<div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+<div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp post-${post.meta('type')}">
     % if post_type:
         <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--accent">
             <i class="material-icons mdl-color-text--white" role="presentation">
@@ -25,7 +25,7 @@
         </button>
     % endif
     <article class="h-entry">
-    <div class="mdl-card__media post-${post.meta('type')}"></div>
+    <div class="mdl-card__media"></div>
     <div class="mdl-card__title">
         <header>
         <h1 class="p-name entry-title"><a href="${post.permalink()}" class="u-url">${post.title()|h}</a></h1>
