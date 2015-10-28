@@ -6,9 +6,23 @@ templates. It gets the idea from the [blog example](http://www.getmdl.io/templat
 The RSS feed icon is getting from
 [Community Icons](https://materialdesignicons.com/icon/rss-box)
 
+## Installation
+
+To install:
+
+```
+nikola install_theme mdl
+```
+
+Because it used [SASS](http://sass-lang.com/) files for styles. Edit ``conf.py``
+and set ``SASS_COMPILER = 'sass'`` and ``USE_BUNDLES = False``. Refer to
+[Customizing Your Site](https://getnikola.com/handbook.html#customizing-your-site)
+for more information. If ``post_type`` is used, it accepts a dictionary value, where ``key`` is the post meta type and value is the icon name from [Google Material Design Icons](https://www.google.com/design/icons/). There is an example in ``Customization`` section.
+
 ## Customization
 
-It supports some variables in the config:
+It supports some variables in the config file (conf.py). Below are the default
+values except ``post_type``, where is ``{}``:
 
 ```
     GLOBAL_CONTEXT = {
@@ -16,7 +30,7 @@ It supports some variables in the config:
         "color_scheme": "indigo-pink",
         "roboto_font": False,
         "mega_footer": False,
-        "breadcrumb_separator": "/",
+        "breadcrumb_separator": ">",
         "post_type": {
             "text": "format_align_justify",
         }
@@ -28,7 +42,7 @@ It supports some variables in the config:
  from ``Material Design Lite``
 * ``roboto_font`` is a flag whether Roboto font is used, refer to [styles documentation](http://www.getmdl.io/styles/index.html)
 * If ``mega_footer`` true, ``mega footer`` will used. Or else, ``mini footer`` will used, refer to [footer documentation](http://www.getmdl.io/components/index.html#layout-section/footer)
-* If [Post Types](https://getnikola.com/handbook.html#post-types) feature in [Nikola](https://getnikola.com/) is used, ``post_type`` can used to style different type of posts
+* If [Post Types](https://getnikola.com/handbook.html#post-types) feature in [Nikola](https://getnikola.com/) is used, ``post_type`` can used to style different type of posts.
 
 ## Known Issues
 
