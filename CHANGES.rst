@@ -1,8 +1,11 @@
 Changelog
 =========
 
-0.2 (unreleased)
+0.1.2 (unreleased)
 ----------------
+
+- Update blockquote style.
+  [ivanteoh]
 
 0.1.1 (2015-10-28)
 ------------------
