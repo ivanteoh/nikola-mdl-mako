@@ -411,12 +411,46 @@ a {
 
 }
 
-
-
 /* Fixes for IE 10 */
 .mdl-grid {
 	display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+/* link-figure */
+.link-figure {
+	width: 100%;
+	overflow: hidden;
+}
+
+.link-figure-media {
+	float: left;
+	width: 200px;
+}
+
+.link-figure-title {
+	font-size: 2em;
+}
+
+.link-figure-author {
+	float: right;
+}
+
+/* book-figure */
+.book-figure {
+  @extend .link-figure;
+}
+
+.book-figure-media {
+  @extend .link-figure-media;
+}
+
+.book-figure-title {
+  @extend .link-figure-title;
+}
+
+.book-figure-book-number, .book-figure-review {
+	margin: 0 0 10px;
 }
