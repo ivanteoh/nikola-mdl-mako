@@ -57,13 +57,13 @@ lang="${lang}">
 
     ${mathjax_config}
     %if mdl_version:
-        <script src="https://storage.googleapis.com/code.getmdl.io/${mdl_version}/material.min.js"></script>
+        <script src="//storage.googleapis.com/code.getmdl.io/${mdl_version}/material.min.js"></script>
     %else:
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+        <script src="//storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
     %endif
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     %if roboto_font:
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     %endif
 
     ${extra_head_data}
@@ -76,15 +76,15 @@ lang="${lang}">
 <%def name="html_stylesheets()">
     %if mdl_version:
         %if color_scheme:
-            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/${mdl_version}/material.${color_scheme}.min.css">
+            <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/${mdl_version}/material.${color_scheme}.min.css">
         %else:
-            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/${mdl_version}/material.indigo-pink.min.css">
+            <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/${mdl_version}/material.indigo-pink.min.css">
         %endif
     %else:
         %if color_scheme:
-            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.${color_scheme}.min.css">
+            <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.5/material.${color_scheme}.min.css">
         %else:
-            <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+            <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
         %endif
     %endif
     %if use_bundles:
