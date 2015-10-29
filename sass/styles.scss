@@ -188,6 +188,7 @@ a {
   		-moz-border-radius: 10px;
 			border-radius: 10px;
 			padding: 5px;
+			width: 100%;
 		}
 
 		blockquote::before {
@@ -433,6 +434,10 @@ a {
 
 .entry-summary > div {
 	width: 100%;
+}
+
+.section {
+	clear: both;
 }
 
 /* link-figure */
