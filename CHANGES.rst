@@ -6,6 +6,10 @@ Changelog
 
 - Update blockquote style.
   [ivanteoh]
+- Update link figure style.
+  [ivanteoh]
+- Update book figure style.
+  [ivanteoh]
 
 0.1.1 (2015-10-28)
 ------------------

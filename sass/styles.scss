@@ -445,6 +445,12 @@ a {
 
 .book-figure-media {
   @extend .link-figure-media;
+	.book-figure-image {
+		img {
+			width: 180px;
+			height: auto;
+		}
+	}
 }
 
 .book-figure-title {
