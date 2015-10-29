@@ -39,6 +39,18 @@ a {
 	}
 }
 
+.thumbnails {
+	list-style: none;
+	li {
+		float: left;
+		margin: 10px;
+	}
+
+	& + * {
+		clear: both;
+	}
+}
+
 /* demo-blog */
 .theme-blog {
 
@@ -419,10 +431,15 @@ a {
   display: flex !important;
 }
 
+.entry-summary > div {
+	width: 100%;
+}
+
 /* link-figure */
 .link-figure {
 	width: 100%;
 	overflow: hidden;
+	padding: 10px 0;
 }
 
 .link-figure-media {
