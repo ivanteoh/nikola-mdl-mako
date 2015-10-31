@@ -10,7 +10,9 @@ Changelog
   [ivanteoh]
 - Update book figure style.
   [ivanteoh]
-- Add more button at top header.
+- Add `more_button_header` flag to show more button at top header.
+  [ivanteoh]
+- Add `top_nav_header` flag to show navigation at top header.
   [ivanteoh]
 
 0.1.1 (2015-10-28)

@@ -33,16 +33,30 @@ values except ``post_type``, where is ``{}``:
         "breadcrumb_separator": ">",
         "post_type": {
             "text": "format_align_justify",
-        }
+        },
+        "top_nav_header": False,
+        "more_button_header": [
+            ("/mobile/", "Mobile Site", "Mobile"),
+        ],
     }
 ```
 
 * ``mdl_version`` is ``Material Design Lite`` version number
 * ``color_scheme`` is [colour scheme](http://www.getmdl.io/customize/index.html)
- from ``Material Design Lite``
-* ``roboto_font`` is a flag whether Roboto font is used, refer to [styles documentation](http://www.getmdl.io/styles/index.html)
-* If ``mega_footer`` true, ``mega footer`` will used. Or else, ``mini footer`` will used, refer to [footer documentation](http://www.getmdl.io/components/index.html#layout-section/footer)
-* If [Post Types](https://getnikola.com/handbook.html#post-types) feature in [Nikola](https://getnikola.com/) is used, ``post_type`` can used to style different type of posts.
+  from ``Material Design Lite``
+* ``roboto_font`` is a flag whether Roboto font is used, refer to
+  [styles documentation](http://www.getmdl.io/styles/index.html)
+* If ``mega_footer`` true, ``mega footer`` will used. Or else, ``mini footer``
+  will used, refer to
+  [footer documentation]
+  (http://www.getmdl.io/components/index.html#layout-section/footer)
+* If [Post Types](https://getnikola.com/handbook.html#post-types) feature in
+  [Nikola](https://getnikola.com/) is used, ``post_type`` can used to style
+  different type of posts.
+* If ``top_nav_header`` true, navigation will visible when top header is
+  appeared on wider screen.
+* ``more_button_header`` is optional button at top menu header after search
+  button. It is a tuple list, where ``("URL", "title", "menu name")`` as format.
 
 ## Known Issues
 
