@@ -10,6 +10,8 @@ Changelog
   [ivanteoh]
 - Update book figure style.
   [ivanteoh]
+- Add more button at top header.
+  [ivanteoh]
 
 0.1.1 (2015-10-28)
 ------------------

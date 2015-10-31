@@ -16,7 +16,7 @@
                     ${search_form}
                 </div>
             %endif
-            ${html_translation_header()}
+            ${html_more_button()}
         </div>
     </header>
     ${html_navigation_links()}
@@ -40,7 +40,7 @@
         </a></h1>
         <nav class="mdl-navigation">
             %for url, text in navigation_links[lang]:
-                % if rel_link(permalink, url) == "#":
+                %if rel_link(permalink, url) == "#":
                     <a class="mdl-navigation__link active" href="${permalink}">${text} <span class="sr-only">${messages("(active)", lang)}</span></a>
                 %else:
                     <a class="mdl-navigation__link" href="${url}">${text}</a>
@@ -52,16 +52,25 @@
     </div>
 </%def>
 
-<%def name="html_translation_header()">
-    %if len(translations) > 1:
-        <button id="toptranslations"
+<%def name="html_more_button()">
+    %if len(translations) > 1 or more_button_header:
+        <button id="more-button"
                 class="mdl-button mdl-js-button mdl-button--icon">
             <i class="material-icons">more_vert</i>
         </button>
         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-            for="toptranslations">
-            <li class="mdl-menu__item">${messages("Languages:")}</li>
-            <li class="mdl-menu__item">${base.html_translations()}</li>
+            for="more-button">
+            %if more_button_header:
+                %for url, title, text in more_button_header:
+                <li class="mdl-menu__item">
+                    <a href="${url}" title="${title}" >${text}</a>
+                </li>
+                %endfor
+            %endif
+            %if len(translations) > 1:
+                <li class="mdl-menu__item">${messages("Languages:")}</li>
+                <li class="mdl-menu__item">${base.html_translations()}</li>
+            %endif
         </ul>
     %endif
 </%def>
