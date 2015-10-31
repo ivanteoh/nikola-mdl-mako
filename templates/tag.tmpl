@@ -41,7 +41,7 @@
                 %if len(translations) > 1 and generate_rss:
                     %for language in sorted(translations):
                     <p class="feedlink">
-                        <a class="logo" href="${_link(kind + "_rss", tag, language)}" hreflang="${language}" type="application/rss+xml">${messages('RSS feed', language)} (${language})</a>&nbsp;
+                        <a class="logo-rss" href="${_link(kind + "_rss", tag, language)}" hreflang="${language}" type="application/rss+xml">${messages('RSS feed', language)} (${language})</a>&nbsp;
                     </p>
                     %endfor
                 %elif generate_rss:
