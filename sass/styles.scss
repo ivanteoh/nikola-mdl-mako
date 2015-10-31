@@ -24,14 +24,16 @@ a {
 	text-decoration: none;
 }
 
-.logo {
+
+.logo-rss {
   display: block;
   text-indent: -9999px;
   width: 26px;
   height: 26px;
-  background: url(../images/rss-box.svg);
+  background: url(../img/rss-box.svg);
   background-size: 26px 26px;
 }
+
 
 .postlist {
 	.listdate {
