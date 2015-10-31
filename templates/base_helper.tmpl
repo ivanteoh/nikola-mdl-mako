@@ -70,6 +70,12 @@ lang="${lang}">
 </%def>
 
 <%def name="late_load_js()">
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"
+        type="text/javascript"></script>
+    %if use_lightbox:
+        <script src="/assets/lightbox/js/lightbox.js"
+            type="text/javascript"></script>
+    %endif
     ${social_buttons_code}
 </%def>
 
@@ -86,6 +92,10 @@ lang="${lang}">
         %else:
             <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
         %endif
+    %endif
+    %if use_lightbox:
+        <link href="/assets/lightbox/css/lightbox.css" rel="stylesheet"
+            type="text/css">
     %endif
     %if use_bundles:
         %if use_cdn:

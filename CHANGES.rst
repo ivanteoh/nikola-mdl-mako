@@ -14,6 +14,8 @@ Changelog
   [ivanteoh]
 - Add `top_nav_header` flag to show navigation at top header.
   [ivanteoh]
+- Add `use_lightbox` flag to have lightbox script handling images in gallery.
+  [ivanteoh]
 
 0.1.1 (2015-10-28)
 ------------------

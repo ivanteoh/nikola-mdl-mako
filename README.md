@@ -38,6 +38,7 @@ values except ``post_type``, where is ``{}``:
         "more_button_header": [
             ("/mobile/", "Mobile Site", "Mobile"),
         ],
+        "use_lightbox": False,
     }
 ```
 
@@ -55,8 +56,12 @@ values except ``post_type``, where is ``{}``:
   different type of posts.
 * If ``top_nav_header`` true, navigation will visible when top header is
   appeared on wider screen.
-* ``more_button_header`` is optional button at top menu header after search
-  button. It is a tuple list, where ``("URL", "title", "menu name")`` as format.
+* If ``more_button_header`` true, more button at top menu header will visible
+  after search button. It is a tuple list, where
+  ``("URL", "title", "menu name")`` as format.
+* If ``use_lightbox`` is true, [lightbox]
+  (http://lokeshdhakar.com/projects/lightbox2/) script is used to view full
+  images in gallery pages.
 
 ## Known Issues
 
@@ -67,10 +72,19 @@ values except ``post_type``, where is ``{}``:
 
 ## License
 
-Material Design Lite [Apache License Version 2.0](https://github.com/google/material-design-lite/blob/master/LICENSE)
+Material Design Lite [Apache License Version 2.0]
+(https://github.com/google/material-design-lite/blob/master/LICENSE)
 
-Google Material Design Icons - [Attribution 4.0 International](https://github.com/google/material-design-icons/blob/master/LICENSE)
+Google Material Design Icons - [Attribution 4.0 International]
+(https://github.com/google/material-design-icons/blob/master/LICENSE)
 
-RSS Feed Icons - [SIL Open Font License 1.1](http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web)
+RSS Feed Icons - [SIL Open Font License 1.1]
+(http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web)
 
-Templates - [Apache License Version 2.0](https://github.com/ivanteoh/nikola-mdl-mako/blob/master/LICENSE)
+jQuery - [MIT License](https://jquery.org/license/)
+
+Lightbox - [MIT License]
+(https://github.com/lokesh/lightbox2/blob/master/LICENSE)
+
+Templates - [Apache License Version 2.0]
+(https://github.com/ivanteoh/nikola-mdl-mako/blob/master/LICENSE)
