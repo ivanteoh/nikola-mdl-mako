@@ -72,9 +72,17 @@ lang="${lang}">
 <%def name="late_load_js()">
     <script src="//code.jquery.com/jquery-2.1.4.min.js"
         type="text/javascript"></script>
-    %if use_lightbox:
-        <script src="/assets/lightbox/js/lightbox.js"
+    %if image_plugin and image_plugin == 'lightbox':
+        <script src="/assets/lightbox/js/lightbox.min.js"
             type="text/javascript"></script>
+    %endif
+    %if image_plugin and image_plugin == 'colorbox':
+        <script src="/assets/colorbox/js/jquery.colorbox-min.js"
+            type="text/javascript"></script>
+        %if colorbox_locales[lang]:
+            <script src="/assets/colorbox/js/colorbox-i18n/jquery.colorbox-${colorbox_locales[lang]}.js">
+            </script>
+        %endif
     %endif
     ${social_buttons_code}
 </%def>
@@ -93,8 +101,12 @@ lang="${lang}">
             <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
         %endif
     %endif
-    %if use_lightbox:
+    %if image_plugin and image_plugin == 'lightbox':
         <link href="/assets/lightbox/css/lightbox.css" rel="stylesheet"
+            type="text/css">
+    %endif
+    %if image_plugin and image_plugin == 'colorbox':
+        <link href="/assets/colorbox/css/colorbox.css" rel="stylesheet"
             type="text/css">
     %endif
     %if use_bundles:

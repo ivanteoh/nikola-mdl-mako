@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.2 (unreleased)
+----------------
+
+- Add `image_plugin` flag to choice either empty, `colorbox` or `lightbox`.
+  [ivanteoh]
+
 0.1.2 (2015-11-03)
 ------------------
 

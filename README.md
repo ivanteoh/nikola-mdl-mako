@@ -38,7 +38,7 @@ values except ``post_type``, where is ``{}``:
         "more_button_header": [
             ("/mobile/", "Mobile Site", "Mobile"),
         ],
-        "use_lightbox": False,
+        "image_plugin": "colorbox",
     }
 ```
 
@@ -59,9 +59,13 @@ values except ``post_type``, where is ``{}``:
 * If ``more_button_header`` true, more button at top menu header will visible
   after search button. It is a tuple list, where
   ``("URL", "title", "menu name")`` as format.
-* If ``use_lightbox`` is true, [lightbox]
-  (http://lokeshdhakar.com/projects/lightbox2/) script is used to view full
-  images in gallery pages.
+* String value ``image_plugin`` is either empty string, ``lightbox`` or
+  ``colorbox``. It it is empty string, no image plugin will be used. If it is
+  ``colorbox``, [colorbox](http://www.jacklmoore.com/colorbox/) script is used
+  to view full images. It is the same image library as
+  [Nikola](https://getnikola.com/) used. If it is ``lightbox``,
+  [lightbox](http://lokeshdhakar.com/projects/lightbox2/) script is used to view
+  full images in gallery pages.
 
 ## Known Issues
 
@@ -82,6 +86,9 @@ RSS Feed Icons - [SIL Open Font License 1.1]
 (http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web)
 
 jQuery - [MIT License](https://jquery.org/license/)
+
+Colorbox - [MIT License]
+(http://opensource.org/licenses/mit-license.php)
 
 Lightbox - [MIT License]
 (https://github.com/lokesh/lightbox2/blob/master/LICENSE)

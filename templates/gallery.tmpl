@@ -29,7 +29,7 @@
             %for image in photo_array:
                 <div class="mdl-card mdl-cell mdl-cell--3-col mdl-shadow--2dp">
                     <div class="mdl-card__media mdl-color--white">
-                        %if use_lightbox:
+                        %if image_plugin and image_plugin == 'lightbox':
                         <a href="${image['url']}" data-lightbox="image-gallery"
                            data-title="${image['title']}"
                            class="thumbnail image-reference"
@@ -59,4 +59,12 @@
 <%block name="extra_head">
 ${parent.extra_head()}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+</%block>
+
+<%block name="extra_js">
+%if image_plugin and image_plugin == 'colorbox':
+<script>
+$("a.thumbnail").colorbox({rel:"gal", maxWidth:"100%",maxHeight:"100%",scalePhotos:true});
+</script>
+%endif
 </%block>

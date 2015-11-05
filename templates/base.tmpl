@@ -20,6 +20,9 @@ ${template_hooks['extra_head']()}
          </main>
     </div>
     ${base.late_load_js()}
+    %if image_plugin and image_plugin == 'colorbox':
+    <script>$('.thumbnails a').colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
+    %endif
     <%block name="extra_js"></%block>
     ${body_end}
     ${template_hooks['body_end']()}
