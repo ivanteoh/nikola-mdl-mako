@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2 (unreleased)
+0.2 (2015-11-09)
 ----------------
 
 - Add `image_plugin` flag to choice either empty, `colorbox` or `lightbox`.
