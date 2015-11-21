@@ -4,9 +4,6 @@ Changelog
 0.2.1 (unreleased)
 ----------------
 
-- Fix the figure content.
-  [ivanteoh]
-
 0.2 (2015-11-09)
 ----------------
 

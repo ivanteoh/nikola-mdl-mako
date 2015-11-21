@@ -457,10 +457,6 @@ iframe + p {
 	width: 200px;
 }
 
-.link-figure-content {
-	float: left;
-}
-
 .link-figure-title {
 	font-size: 2em;
 }
@@ -482,10 +478,6 @@ iframe + p {
 			height: auto;
 		}
 	}
-}
-
-.book-figure-content {
-	@extend .link-figure-content;
 }
 
 .book-figure-title {
