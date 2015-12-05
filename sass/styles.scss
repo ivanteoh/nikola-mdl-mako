@@ -381,11 +381,16 @@ iframe + p {
 			      -ms-flex-direction: column;
 			          flex-direction: column;
 
-				p {
+				p, ul, ol, table {
 				  max-width: 512px;
 				  margin: 16px auto;
 				  font-size: 16px;
 				  line-height: 28px;
+				}
+
+				.section-recipe {
+					max-width: 512px;
+				  margin: 16px auto;
 				}
 			}
 		}
