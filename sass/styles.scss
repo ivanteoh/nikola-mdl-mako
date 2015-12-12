@@ -193,7 +193,7 @@ iframe + p {
   		-moz-border-radius: 10px;
 			border-radius: 10px;
 			padding: 5px;
-			width: 100%;
+			max-width: 100%;
 		}
 
 		blockquote::before {
@@ -273,7 +273,7 @@ iframe + p {
 		}
 
 		strong {
-		 font-weight: 400;
+		 font-weight: 700;
 	 	}
 
 		~ .mdl-card__supporting-text {
@@ -386,6 +386,10 @@ iframe + p {
 				  margin: 16px auto;
 				  font-size: 16px;
 				  line-height: 28px;
+				}
+
+				table {
+					display: block;
 				}
 
 				.section-recipe {
