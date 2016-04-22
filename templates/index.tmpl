@@ -17,7 +17,7 @@
 % for post in posts:
 <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp post-${post.meta('type')}">
     % if post_type:
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--accent">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--accent mdl-js-ripple-effect">
             <i class="material-icons mdl-color-text--white" role="presentation">
                 ${post_type[post.meta('type')]}
             </i>
@@ -40,7 +40,8 @@
     %endif
     </div>
     <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-        <div><button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">${"".join([x[0].upper() for x in post.author().split()])}</button></div>
+        <div>
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">${"".join([x[0].upper() for x in post.author().split()])}</button></div>
         <div>
             <strong class="metadata byline author vcard">
                 <span class="byline-name fn">
