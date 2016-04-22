@@ -26,7 +26,7 @@ values except ``post_type``, where is ``{}``:
 
 ```
     GLOBAL_CONTEXT = {
-        "mdl_version": "1.0.5",
+        "mdl_version": "1.1.3",
         "color_scheme": "indigo-pink",
         "roboto_font": False,
         "mega_footer": False,
