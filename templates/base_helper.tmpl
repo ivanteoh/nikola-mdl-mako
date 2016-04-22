@@ -57,9 +57,9 @@ lang="${lang}">
 
     ${mathjax_config}
     %if mdl_version:
-        <script src="//storage.googleapis.com/code.getmdl.io/${mdl_version}/material.min.js"></script>
+        <script defer src="//storage.googleapis.com/code.getmdl.io/${mdl_version}/material.min.js"></script>
     %else:
-        <script src="//storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+        <script defer src="//storage.googleapis.com/code.getmdl.io/1.1.3/material.min.js"></script>
     %endif
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     %if roboto_font:
@@ -96,9 +96,9 @@ lang="${lang}">
         %endif
     %else:
         %if color_scheme:
-            <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.5/material.${color_scheme}.min.css">
+            <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.1.3/material.${color_scheme}.min.css">
         %else:
-            <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-pink.min.css">
+            <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.1.3/material.indigo-pink.min.css">
         %endif
     %endif
     %if image_plugin and image_plugin == 'lightbox':
