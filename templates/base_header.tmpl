@@ -32,10 +32,11 @@ mdl-layout--large-screen-only
             <div class="mdl-layout-spacer"></div>
         %endif
             %if top_nav_header:
+            <span class="sr-only">main navigation</span>
             <nav class="mdl-navigation">
               %for url, text in navigation_links[lang]:
                   %if rel_link(permalink, url) == "#":
-                      <a class="mdl-navigation__link active" href="${permalink}">${text} <span class="sr-only">${messages("(active)", lang)}</span></a>
+                      <a class="mdl-navigation__link is-active" href="${permalink}">${text} <span class="sr-only">${messages("(active)", lang)}</span></a>
                   %else:
                       <a class="mdl-navigation__link" href="${url}">${text}</a>
                   %endif
@@ -90,10 +91,11 @@ mdl-layout--small-screen-only
             ${drawer_description}
         </div>
         %endif
+        <span class="sr-only">side navigation</span>
         <nav class="mdl-navigation">
             %for url, text in navigation_links[lang]:
                 %if rel_link(permalink, url) == "#":
-                    <a class="mdl-navigation__link active" href="${permalink}">${text} <span class="sr-only">${messages("(active)", lang)}</span></a>
+                    <a class="mdl-navigation__link is-active" href="${permalink}">${text} <span class="sr-only">${messages("(active)", lang)}</span></a>
                 %else:
                     <a class="mdl-navigation__link" href="${url}">${text}</a>
                 %endif
