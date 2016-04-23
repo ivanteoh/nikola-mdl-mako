@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.1 (unreleased)
+0.3 (unreleased)
 ------------------
 
 - Update the default MDL version to 1.1.3.
@@ -9,7 +9,8 @@ Changelog
 - Add all the buttons to have 'mdl-js-ripple-effect' to let users know when the
   button is clicked.
   [ivanteoh]
-
+- Add more options for header and drawer layout.
+  [ivanteoh]
 
 0.2 (2015-11-09)
 ----------------

@@ -80,14 +80,14 @@ mdl-layout--small-screen-only
             %if drawer_logo_url:
                 <img src="${drawer_logo_url}" alt="${drawer_title|h}">
             %endif
-            % if show_drawer_title:
+            % if drawer_show_title:
                 <span>${drawer_title|h}</span>
             % endif
         </div>
         %endif
         %if drawer_description:
         <div class="drawer-description">
-            ${drawer_logo_url}
+            ${drawer_description}
         </div>
         %endif
         <nav class="mdl-navigation">

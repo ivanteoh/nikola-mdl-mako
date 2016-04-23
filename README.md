@@ -17,7 +17,10 @@ nikola install_theme mdl
 Because it used [SASS](http://sass-lang.com/) files for styles. Edit ``conf.py``
 and set ``SASS_COMPILER = 'sass'`` and ``USE_BUNDLES = False``. Refer to
 [Customizing Your Site](https://getnikola.com/handbook.html#customizing-your-site)
-for more information. If ``post_type`` is used, it accepts a dictionary value, where ``key`` is the post meta type and value is the icon name from [Google Material Design Icons](https://www.google.com/design/icons/). There is an example in ``Customization`` section.
+for more information. If ``post_type`` is used, it accepts a dictionary value,
+where ``key`` is the post meta type and value is the icon name from
+[Google Material Design Icons](https://www.google.com/design/icons/). There is
+an example in ``Customization`` section.
 
 ## Components
 
@@ -29,7 +32,8 @@ Here are the components that used in this theme
 * Grid (mdl-grid)
 * Footer (mdl-mega-footer or mdl-mini-footer)
 * Menus (mdl-menu) on top right navigation and tags menu
-* Text Fields (mdl-textfield) not in the theme but you might need it on search box
+* Text Fields (mdl-textfield) not in the theme but you might need it on search
+  box
 * Tooltips (mdl-tooltip) not in the theme but you might need it on search box
 
 ## Customization
@@ -46,15 +50,20 @@ values except ``post_type``, where is ``{}``:
         "mdl__fixed_drawer": False,
         "mdl__no_drawer_button": False,
         "mdl__no_desktop_drawer_button": False,
-        "mdl__header_scroll": False,
         "mdl__multiple_header": False,
+        "mdl__header_scroll": False,
         "mdl__header_waterfall": False,
         "mdl__header_waterfall_hide_top": False,
         "mdl__header_transparent": False,
         "mdl__header_seamed": False,
+        "mdl__footer": "",
         "mdl__navigation_large_screen_only": False,
         "mdl__drawer_small_screen_only": False,
-        "mdl__footer": "",
+        "drawer_title": "",
+        "drawer_logo_url": "",
+        "drawer_show_title": "",
+        "drawer_description": "",
+        "drawer_note": "",
         "breadcrumb_separator": ">",
         "post_type": {
             "text": "format_align_justify",
@@ -68,28 +77,77 @@ values except ``post_type``, where is ``{}``:
 ```
 
 * ``mdl__version`` is ``Material Design Lite`` version number
-* ``mdl__color_scheme`` is [colour scheme](http://www.getmdl.io/customize/index.html)
-  from ``Material Design Lite``
+* ``mdl__color_scheme`` is
+  [colour scheme](http://www.getmdl.io/customize/index.html) from
+  ``Material Design Lite``
 * ``mdl__roboto_font`` is a flag whether Roboto font is used, refer to
   [styles documentation](http://www.getmdl.io/styles/index.html)
+
+### Layout
+
+Additional optional MDL classes for outer div element:
+
 * When ``mdl__fixed_header`` is ``True``, class ``mdl-layout--fixed-header``
   is applied for making the header always visible, even in small screens
 * When ``mdl__fixed_drawer`` is ``True``, class ``mdl-layout--fixed-drawer``
   is applied for making the drawer always visible and open in larger screens
-* When ``mdl__no_drawer_button`` is ``True``, class ``mdl-layout--no-drawer-button`` is applied for not displaying a drawer button
-* When ``mdl__no_desktop_drawer_button`` is ``True``, class ``mdl-layout--no-desktop-drawer-button`` is applied for not displaying a drawer button in desktop mode
-* When ``mdl__header_scroll`` is ``True``, class ``mdl-layout__header--scroll`` is applied for making the header scroll with the content and mutually exclusive with ``mdl__fixed_header``
-* When ``mdl__multiple_header`` is ``True``, top navigation will move to second line
-* When ``mdl__header_waterfall`` is ``True``, class ``mdl-layout__header--waterfall`` is applied for allowing a "waterfall" effect with multiple header lines
-* When ``mdl__header_waterfall_hide_top`` is ``True``, class ``mdl-layout__header--waterfall-hide-top`` is applied for hiding the top rather than the bottom rows on a waterfall header
-* When ``mdl__header_transparent`` is ``True``, class ``mdl-layout__header--transparent`` is applied for making header transparent (draws on top of layout background)
-* When ``mdl__header_seamed`` is ``True``, class ``mdl-layout__header--seamed`` is applied for using a header without a shadow
-* When ``mdl__navigation_large_screen_only`` is ``True``, it hides navigation row in multiple header lines on smaller screens
-* When ``mdl__drawer_small_screen_only`` is ``True``, it hides drawer on larger screens
+* When ``mdl__no_drawer_button`` is ``True``, class
+  ``mdl-layout--no-drawer-button`` is applied for not displaying a drawer
+  button
+* When ``mdl__no_desktop_drawer_button`` is ``True``, class
+  ``mdl-layout--no-desktop-drawer-button`` is applied for not displaying a
+  drawer button in desktop mode
+
+### Header
+
+* When ``mdl__multiple_header`` is ``True``, logo and title will be first line
+  and top navigation will move to second line
+
+Additional optional MDL classes for header element:
+
+* When ``mdl__header_scroll`` is ``True``, class ``mdl-layout__header--scroll``
+  is applied for making the header scroll with the content and mutually
+  exclusive with ``mdl__fixed_header``
+* When ``mdl__header_waterfall`` is ``True``, class
+  ``mdl-layout__header--waterfall`` is applied for allowing a "waterfall"
+  effect with multiple header lines
+* When ``mdl__header_waterfall_hide_top`` is ``True``, class
+  ``mdl-layout__header--waterfall-hide-top`` is applied for hiding the top
+  rather than the bottom rows on a waterfall header
+* When ``mdl__header_transparent`` is ``True``, class
+  ``mdl-layout__header--transparent`` is applied for making header transparent
+  (draws on top of layout background)
+* When ``mdl__header_seamed`` is ``True``, class ``mdl-layout__header--seamed``
+  is applied for using a header without a shadow
+
+### footer
+
 * By default, ``mdl__footer`` is empty. But it could be also either
   ``mdl__mega_footer`` or ``mdl__mini_footer``, refer to
   [footer documentation]
   (http://www.getmdl.io/components/index.html#layout-section/footer)
+
+### Navigation
+
+* When ``mdl__navigation_large_screen_only`` is ``True``, it hides navigation
+  row in multiple header lines on smaller screens
+
+### Drawer
+
+* When ``mdl__drawer_small_screen_only`` is ``True``, it hides drawer on larger
+  screens
+* ``drawer_title`` is the title in the drawer and it could be set the same as
+  ``BLOG_TITLE``
+* ``drawer_logo_url`` is the logo url in the drawer and final output is
+  <img src="drawer_logo_url" alt="drawer_title">
+* The default of ``drawer_show_title`` is ``False``. It hides the drawer title
+  (for example, if drawer logo already contains the text).  
+* ``drawer_description`` is more HTML text between ``drawer_title`` and drawer
+  navigation
+* ``drawer_note`` is more HTML text after drawer navigation
+
+### Others
+
 * When [Post Types](https://getnikola.com/handbook.html#post-types) feature in
   [Nikola](https://getnikola.com/) is used, ``post_type`` can used to style
   different type of posts.
@@ -119,6 +177,7 @@ values except ``post_type``, where is ``{}``:
 * ``USE_BUNDLES`` and ``USE_CDN`` are not working
 * Submenus in navigation links are not supported
 * ``THEME_COLOR`` is not used regardless the value
+* Not meet WCAG 2.0 level AA
 
 ## License
 
