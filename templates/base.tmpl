@@ -12,7 +12,20 @@ ${template_hooks['extra_head']()}
 </head>
 <body>
     <a href="#content" class="sr-only sr-only-focusable">${messages("Skip to main content")}</a>
-    <div id="container" class="theme-blog mdl-layout mdl-js-layout">
+    <div id="container" class="theme-blog mdl-layout mdl-js-layout
+    %if mdl__fixed_header:
+mdl-layout--fixed-header
+    %endif
+    %if mdl__fixed_drawer:
+mdl-layout--fixed-drawer
+    %endif
+    %if mdl__no_drawer_button:
+mdl-layout--no-drawer-button
+    %endif
+    %if mdl__no_desktop_drawer_button:
+mdl-layout--no-desktop-drawer-button
+    %endif
+    ">
          ${header.html_header()}
          <main id="content" class="mdl-layout__content">
             <%block name="content"></%block>

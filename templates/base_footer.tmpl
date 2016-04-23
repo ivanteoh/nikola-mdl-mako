@@ -3,16 +3,15 @@
 
 <%def name="html_footer()">
     %if content_footer:
-        %if mega_footer:
-            <footer id="footer" class="mdl-mega-footer">
-                ${content_footer}
-                ${template_hooks['page_footer']()}
-            </footer>
-        %else:
-            <footer id="footer" class="mdl-mini-footer">
-                ${content_footer}
-                ${template_hooks['page_footer']()}
-            </footer>
-        %endif
+        <footer id="footer"
+            %if mdl__footer == "mdl__mega_footer":
+                class="mdl-mega-footer"
+            %elif mdl__footer == "mdl__mini_footer":
+                class="mdl-mini-footer"
+            %endif
+        >
+            ${content_footer}
+            ${template_hooks['page_footer']()}
+        </footer>
     %endif
 </%def>
