@@ -64,6 +64,8 @@ values except ``post_type``, where is ``{}``:
         "drawer_show_title": "",
         "drawer_description": "",
         "drawer_note": "",
+        "title_row_middle": False,
+        "navigation_row_middle": False,
         "breadcrumb_separator": ">",
         "post_type": {
             "text": "format_align_justify",
@@ -102,6 +104,8 @@ Additional optional MDL classes for outer div element:
 
 * When ``mdl__multiple_header`` is ``True``, logo and title will be first line
   and top navigation will move to second line
+* When ``title_row_middle`` is ``True``, title row (or first line in multiple
+  header lines) will position in the middle
 
 Additional optional MDL classes for header element:
 
@@ -131,6 +135,8 @@ Additional optional MDL classes for header element:
 
 * When ``mdl__navigation_large_screen_only`` is ``True``, it hides navigation
   row in multiple header lines on smaller screens
+* When ``navigation_row_middle`` is ``True``, navigation row (second line) in
+  multiple header lines will position in the middle
 
 ### Drawer
 

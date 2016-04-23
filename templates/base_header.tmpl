@@ -19,13 +19,20 @@ mdl-layout__header--transparent
 mdl-layout__header--seamed
     %endif
     ">
-        <div class="mdl-layout__header-row title-row">
+        <div class="mdl-layout__header-row title-row
+        %if title_row_middle:
+mdl-cell--middle
+        %endif
+        ">
             ${html_site_title()}
         %if mdl__multiple_header:
         </div>
         <div class="mdl-layout__header-row navigation-row
         %if mdl__navigation_large_screen_only:
 mdl-layout--large-screen-only
+        %endif
+        %if navigation_row_middle:
+mdl-cell--middle
         %endif
         ">
         %else:
