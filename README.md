@@ -170,12 +170,38 @@ Additional optional MDL classes for header element:
   [lightbox](http://lokeshdhakar.com/projects/lightbox2/) script is used to view
   full images in gallery pages.
 
-## Depreciated values
+## Depreciated GLOBAL_CONTEXT
 
 * ``mdl_version`` is replaced with ``mdl__version``
 * ``color_scheme`` is replaced with ``mdl__color_scheme``
 * ``roboto_font`` is replaced with ``mdl__roboto_font``
 * ``mega_footer`` (boolean type) is replaced with ``mdl__footer`` (string type)
+
+## Depreciated classes
+
+* ``theme-blog`` is replaced with ``site``
+* ``theme-blog__posts`` is replaced with ``site__posts``
+* ``theme-blog__post`` is replaced with ``site__post``
+* ``theme-blog__gallery`` is replaced with ``site__gallery``
+* ``theme-blog__page`` is replaced with ``site__page``
+* ``theme-blog__listing`` is replaced with ``site__listing``
+* ``searchform`` is replaced with ``site__header-search``
+
+## New classes
+
+* ``site__header``
+* ``site__header-title-row``
+* ``site__header-navigation-row``
+* ``site__header-row-middle``
+* ``site__header-navigation``
+* ``site__header-more-button``
+* ``site__title``
+* ``site__drawer``
+* ``site__drawer-title``
+* ``site__drawer-description``
+* ``site__drawer-navigation``
+* ``site__drawer-note``
+* ``site__footer``
 
 ## Known Issues
 

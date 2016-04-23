@@ -57,7 +57,7 @@ iframe + p {
 }
 
 /* demo-blog */
-.theme-blog {
+.site {
 
 	body & {
   	font-family: 'Roboto', 'Helvetica', sans-serif;
@@ -350,7 +350,7 @@ iframe + p {
 
 	}
 
-	.theme-blog__posts {
+	.site__posts {
 		.mdl-card {
 			overflow: visible;
     	z-index: 10;
@@ -367,7 +367,7 @@ iframe + p {
 		}
 	}
 
-	.theme-blog__post {
+	.site__post {
 		.meta {
 			+ .mdl-card__supporting-text {
 			  border: 0;
