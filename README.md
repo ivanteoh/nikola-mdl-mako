@@ -19,6 +19,16 @@ and set ``SASS_COMPILER = 'sass'`` and ``USE_BUNDLES = False``. Refer to
 [Customizing Your Site](https://getnikola.com/handbook.html#customizing-your-site)
 for more information. If ``post_type`` is used, it accepts a dictionary value, where ``key`` is the post meta type and value is the icon name from [Google Material Design Icons](https://www.google.com/design/icons/). There is an example in ``Customization`` section.
 
+## Components
+
+Here are the components that used in this theme
+
+* Buttons (mdl-button)
+* Cards (mdl-card) on post, story and gallery
+* Menus (mdl-menu) on top right navigation and tags menu
+* Text Fields (mdl-textfield) not in the theme but you might need it on search box
+* Tooltips (mdl-tooltip) not in the theme but you might need it on search box
+
 ## Customization
 
 It supports some variables in the config file (conf.py). Below are the default
