@@ -32,7 +32,7 @@
         <nav class="theme-nav hidden-print pager mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
             %if post.prev_post:
                 <a href="${post.prev_post.permalink()}" class="theme-nav__button previous" rel="prev" title="${post.prev_post.title()|h}">
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
                     <i class="material-icons" role="presentation">arrow_back</i>
                   </button>
                   ${messages("Previous post")}
@@ -42,7 +42,7 @@
             %if post.next_post:
                 <a href="${post.next_post.permalink()}" class="theme-nav__button next" rel="next" title="${post.next_post.title()|h}">
                   ${messages("Next post")}
-                  <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                  <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
                     <i class="material-icons" role="presentation">arrow_forward</i>
                   </button>
                 </a>

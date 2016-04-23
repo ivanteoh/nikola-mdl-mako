@@ -4,6 +4,13 @@ Changelog
 0.2.1 (unreleased)
 ------------------
 
+- Update the default MDL version to 1.1.3.
+  [ivanteoh]
+- Add all the buttons to have 'mdl-js-ripple-effect' to let users know when the
+  button is clicked.
+  [ivanteoh]
+
+
 0.2 (2015-11-09)
 ----------------
 
