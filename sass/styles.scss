@@ -1,3 +1,5 @@
+@import "color-definitions";
+
 /* screen reader */
 .sr-only {
     position: absolute;
@@ -402,12 +404,42 @@ iframe + p {
         -ms-flex-pack: center;
         justify-content: center;
     }
+    /* site header navigation */
+    .mdl-navigation__link {
+        &.is-active,
+        &:active,
+        &:hover {
+            position: relative;
+            font-weight: bold;
+        }
+        &.is-active:after {
+          content: "";
+          width: 70%;
+          height: 2px;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          left: 15%;
+          background-color: unquote("rgb(#{$palette-grey-800})");
+        }
+    }
 }
 .entry-summary > div {
     width: 100%;
 }
 .section {
     clear: both;
+}
+/* drawer */
+.site__drawer-navigation {
+    .mdl-navigation__link {
+      &.is-active,
+      &:active {
+          background-color: unquote("rgb(#{$palette-grey-800})");
+          color: unquote("rgb(#{$color-white})") !important;
+      }
+    }
 }
 /* link-figure */
 .link-figure {
