@@ -371,7 +371,7 @@ iframe + p {
         }
     }
     /* footer */
-    .mdl-mini-footer {
+    .site__footer {
         margin-top: 80px;
         height: 120px;
         padding: 40px;
@@ -380,6 +380,8 @@ iframe + p {
         -ms-flex-align: center;
         align-items: center;
         box-sizing: border-box;
+				background-color: #424242;
+				color: #9e9e9e;
     }
 }
 .site__title {

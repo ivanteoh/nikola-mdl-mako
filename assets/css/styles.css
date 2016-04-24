@@ -304,7 +304,7 @@ iframe + p {
     min-height: 135px; }
     .site .image-gallery .mdl-card .mdl-card__media {
       margin: auto; }
-  .site .mdl-mini-footer {
+  .site .site__footer {
     margin-top: 80px;
     height: 120px;
     padding: 40px;
@@ -312,7 +312,9 @@ iframe + p {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    background-color: #424242;
+    color: #9e9e9e; }
 
 .site__title a:hover {
   text-decoration: underline; }

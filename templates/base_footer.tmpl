@@ -3,13 +3,13 @@
 
 <%def name="html_footer()">
     %if content_footer:
-        <footer id="footer"
+        <footer id="footer" class="site__footer
             %if mdl__footer == "mdl__mega_footer":
-                class="mdl-mega-footer site__footer"
+mdl-mega-footer
             %elif mdl__footer == "mdl__mini_footer":
-                class="mdl-mini-footer site__footer"
+mdl-mini-footer
             %endif
-        >
+        ">
             ${content_footer}
             ${template_hooks['page_footer']()}
         </footer>
