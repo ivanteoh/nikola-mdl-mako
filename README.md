@@ -26,12 +26,13 @@ an example in ``Customization`` section.
 
 Here are the components that used in this theme
 
-* Buttons (mdl-button)
+* Buttons (mdl-button) on site buttons
 * Cards (mdl-card) on post, story and gallery
-* Layout (mdl-layout)
-* Grid (mdl-grid)
+* Layout (mdl-layout) on site layout
+* Navigation (mdl-navigation) on top and drawer navigations
+* Grid (mdl-grid) on site grid
 * Footer (mdl-mega-footer or mdl-mini-footer)
-* Menus (mdl-menu) on top right navigation and tags menu
+* Menus (mdl-menu) on tags menu and more button in navigation
 * Text Fields (mdl-textfield) not in the theme but you might need it on search
   box
 * Tooltips (mdl-tooltip) not in the theme but you might need it on search box

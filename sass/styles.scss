@@ -446,6 +446,16 @@ iframe + p {
   display: flex !important;
 }
 
+/* site header */
+.site__header {
+	.site__header-row-middle {
+		padding: 0;
+	  -webkit-justify-content: center;
+	  -ms-flex-pack: center;
+	  justify-content: center;
+	}
+}
+
 .entry-summary > div {
 	width: 100%;
 }
