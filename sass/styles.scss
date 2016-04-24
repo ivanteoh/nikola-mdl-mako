@@ -382,6 +382,11 @@ iframe + p {
         box-sizing: border-box;
     }
 }
+.site__title {
+	a:hover {
+		text-decoration: underline;
+	}
+}
 /* Fixes for IE 10 */
 .mdl-grid {
     display: -webkit-box !important;

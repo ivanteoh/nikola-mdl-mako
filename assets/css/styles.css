@@ -279,7 +279,10 @@ iframe + p {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .site .site__post .meta + .mdl-card__supporting-text p, .site .site__post .meta + .mdl-card__supporting-text ul, .site .site__post .meta + .mdl-card__supporting-text ol, .site .site__post .meta + .mdl-card__supporting-text table {
+    .site .site__post .meta + .mdl-card__supporting-text ol,
+    .site .site__post .meta + .mdl-card__supporting-text p,
+    .site .site__post .meta + .mdl-card__supporting-text table,
+    .site .site__post .meta + .mdl-card__supporting-text ul {
       max-width: 512px;
       margin: 16px auto;
       font-size: 16px;
@@ -310,6 +313,9 @@ iframe + p {
     -ms-flex-align: center;
     align-items: center;
     box-sizing: border-box; }
+
+.site__title a:hover {
+  text-decoration: underline; }
 
 /* Fixes for IE 10 */
 .mdl-grid {
@@ -352,7 +358,8 @@ iframe + p {
   width: 180px;
   height: auto; }
 
-.book-figure-book-number, .book-figure-review {
+.book-figure-book-number,
+.book-figure-review {
   margin: 0 0 10px; }
 
 /*# sourceMappingURL=styles.css.map */
