@@ -312,9 +312,7 @@ iframe + p {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    box-sizing: border-box;
-    background-color: #424242;
-    color: #9e9e9e; }
+    box-sizing: border-box; }
 
 .site__title a:hover {
   text-decoration: underline; }

@@ -142,8 +142,8 @@ Additional optional MDL classes for header element:
 ### footer
 
 * By default, ``mdl__footer`` is empty. But it could be also either
-  ``mdl__mega_footer`` or ``mdl__mini_footer``, refer to
-  [footer documentation]
+  ``mdl-mega-footer`` or ``mdl-mini-footer`` or even any custom classes, refer
+  to [footer documentation]
   (http://www.getmdl.io/components/index.html#layout-section/footer)
 
 ### Navigation
