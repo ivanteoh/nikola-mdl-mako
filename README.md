@@ -10,17 +10,31 @@ The RSS feed icon is getting from
 
 To install:
 
+Enter the command line below at the console
+
 ```
-nikola install_theme mdl
+$ nikola install_theme mdl
 ```
 
-Because it used [SASS](http://sass-lang.com/) files for styles. Edit ``conf.py``
-and set ``SASS_COMPILER = 'sass'`` and ``USE_BUNDLES = False``. Refer to
+Edit ``conf.py`` for setting these values below:
+
+* ``THEME = "mdl"``
+
+Refer to
 [Customizing Your Site](https://getnikola.com/handbook.html#customizing-your-site)
 for more information. If ``post_type`` is used, it accepts a dictionary value,
 where ``key`` is the post meta type and value is the icon name from
 [Google Material Design Icons](https://www.google.com/design/icons/). There is
 an example in ``Customization`` section.
+
+## Style development
+
+You can skip this section if the theme is going to be used as it is. As the
+final ``styles.css`` is generated and placed in ``assets/css`` folder.
+
+The css file is generated using [SASS](http://sass-lang.com/) compiler. If you
+have it installed, you can generate the final ``styles.css`` file by calling
+``make`` as there is a ``Makefile`` that contains the generation commands.
 
 ## Components
 

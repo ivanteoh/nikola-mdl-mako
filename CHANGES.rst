@@ -11,6 +11,8 @@ Changelog
   [ivanteoh]
 - Add more options for header and drawer layout.
   [ivanteoh]
+- Pregenerate `styles.css` for easy theme installation.
+  [ivanteoh]
 
 0.2 (2015-11-09)
 ----------------

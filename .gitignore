@@ -58,3 +58,6 @@ target/
 
 # Mac OS files
 .DS_Store
+
+# SASS
+.sass-cache
