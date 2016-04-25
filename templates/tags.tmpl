@@ -7,14 +7,12 @@
         <article class="tag-index">
             <div class="mdl-card__media"></div>
             <div class="mdl-card__title">
-                <header>
-                    <h1>${title|h}</h1>
-                </header>
+                <h2 class="mdl-card__title-text">${title|h}</h2>
             </div>
             <div class="mdl-grid mdl-color-text--grey-700 mdl-card__supporting-text">
             % if cat_items:
                 % if items:
-                    <h2 class="mdl-cell mdl-cell--12-col">${messages("Categories")}</h2>
+                    <h3 class="mdl-cell mdl-cell--12-col">${messages("Categories")}</h3>
                 % endif
                 % for text, full_name, path, link, indent_levels, indent_change_before, indent_change_after in cat_hierarchy:
                     % for i in range(indent_change_before):
@@ -32,7 +30,7 @@
                     % endfor
                 % endfor
                 % if items:
-                    <h2 class="mdl-cell mdl-cell--12-col">${messages("Tags")}</h2>
+                    <h3 class="mdl-cell mdl-cell--12-col">${messages("Tags")}</h3>
                 % endif
             %endif
             % if items:

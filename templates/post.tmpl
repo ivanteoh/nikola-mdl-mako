@@ -38,7 +38,7 @@
             </div>
             % if not post.meta('nocomments') and site_has_comments:
             <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments hidden-print">
-                <h2>${messages("Comments")}</h2>
+                <h3>${messages("Comments")}</h3>
                 ${comments.comment_form(post.permalink(absolute=True), post.title(), post._base_path)}
             </div>
             % endif
