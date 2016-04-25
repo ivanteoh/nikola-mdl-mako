@@ -373,7 +373,7 @@ iframe + p {
         }
     }
     /* footer */
-    .site__footer {
+    .site-footer {
         margin-top: 80px;
         height: 120px;
         padding: 40px;
@@ -384,7 +384,7 @@ iframe + p {
         box-sizing: border-box;
     }
 }
-.site__title {
+.site-title {
 	a:hover {
 		text-decoration: underline;
 	}
@@ -397,8 +397,8 @@ iframe + p {
     display: flex !important;
 }
 /* site header */
-.site__header {
-    .site__header-row-middle {
+.site-header {
+    .site-header__row-middle {
         padding: 0;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -432,7 +432,7 @@ iframe + p {
     clear: both;
 }
 /* drawer */
-.site__drawer-navigation {
+.site-drawer__navigation {
     .mdl-navigation__link {
       &.is-active,
       &:active {

@@ -209,24 +209,24 @@ Additional optional MDL classes for header element:
 
 ## New classes
 
-* ``site__header``
-* ``site__header-title-row``
-* ``site__header-navigation-row``
-* ``site__header-row-middle``
-* ``site__header-navigation``
-* ``site__header-more-button``
-* ``site__title``
-* ``site__drawer``
-* ``site__drawer-title``
-* ``site__drawer-description``
-* ``site__drawer-navigation``
-* ``site__drawer-note``
-* ``site__footer``
+* ``site-header``
+* ``site-header__title-row``
+* ``site-header__navigation-row``
+* ``site-header__row-middle``
+* ``site-header__navigation``
+* ``site-header__more-button``
+* ``site-title``
+* ``site-drawer``
+* ``site-drawer__title``
+* ``site-drawer__description``
+* ``site-drawer__navigation``
+* ``site-drawer__note``
+* ``site-footer``
 
 ## Known Issues
 
 * Not all features of Nikola are tested
-* ``USE_BUNDLES`` and ``USE_CDN`` are not working
+* ``slider`` is not working
 * Submenus in navigation links are not supported
 * ``THEME_COLOR`` is not used regardless the value
 * Not meet WCAG 2.0 level AA
