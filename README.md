@@ -196,12 +196,16 @@ Additional optional MDL classes for header element:
 ## Depreciated classes
 
 * ``theme-blog`` is replaced with ``site``
-* ``theme-blog__posts`` is replaced with ``site__posts``
-* ``theme-blog__post`` is replaced with ``site__post``
-* ``theme-blog__gallery`` is replaced with ``site__gallery``
-* ``theme-blog__page`` is replaced with ``site__page``
-* ``theme-blog__listing`` is replaced with ``site__listing``
-* ``searchform`` is replaced with ``site__header-search``
+* ``theme-blog__posts`` is replaced with ``site-posts``
+* ``theme-blog__post`` is replaced with ``site-post``
+* ``theme-blog__gallery`` is replaced with ``site-gallery``
+* ``theme-blog__page`` is replaced with ``site-page``
+* ``theme-blog__listing`` is replaced with ``site-listing``
+* ``theme-card`` is replaced with ``site-card``
+* ``theme-nav`` is replaced with ``site-nav``
+* ``theme-nav__button`` is replaced with ``site-nav__button``
+* ``theme-crumbs`` is replaced with ``site-breadcrumbs``
+* ``searchform`` is replaced with ``site-header__search``
 
 ## New classes
 

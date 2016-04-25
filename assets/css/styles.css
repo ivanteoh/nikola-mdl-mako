@@ -106,7 +106,7 @@ body .site {
   color: inherit;
 }
 /* line 79, ../../sass/styles.scss */
-.site .theme-card {
+.site .site-card {
   max-width: 900px;
   padding: 0;
   display: -webkit-box;
@@ -120,7 +120,7 @@ body .site {
   flex-shrink: 0;
 }
 /* line 91, ../../sass/styles.scss */
-.site .theme-card > .theme-nav {
+.site .site-card > .site-nav {
   margin: 12px 15px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -142,19 +142,19 @@ body .site {
   font-weight: 500;
 }
 /* line 111, ../../sass/styles.scss */
-.site .theme-card > .theme-nav .mdl-button {
+.site .site-card > .site-nav .mdl-button {
   color: rgba(0, 0, 0, 0.54);
 }
 /* line 115, ../../sass/styles.scss */
-.site .theme-card > .theme-nav > .theme-nav__button:first-child .mdl-button {
+.site .site-card > .site-nav > .site-nav__button:first-child .mdl-button {
   margin-right: 16px;
 }
 /* line 118, ../../sass/styles.scss */
-.site .theme-card > .theme-nav > .theme-nav__button:last-child .mdl-button {
+.site .site-card > .site-nav > .site-nav__button:last-child .mdl-button {
   margin-left: 16px;
 }
 /* line 123, ../../sass/styles.scss */
-.site .theme-card .comments {
+.site .site-card .comments {
   background-color: #EEE;
   display: -webkit-box;
   display: -webkit-flex;
@@ -177,7 +177,7 @@ body .site {
   box-sizing: border-box;
 }
 /* line 144, ../../sass/styles.scss */
-.site .theme-card .comments h2 {
+.site .site-card .comments h2 {
   color: black;
 }
 /* line 149, ../../sass/styles.scss */
@@ -361,13 +361,13 @@ body .site {
   flex-direction: column;
 }
 /* line 309, ../../sass/styles.scss */
-.site .site__posts .mdl-card {
+.site .site-posts .mdl-card {
   overflow: visible;
   z-index: 10;
   margin-top: 50px;
 }
 /* line 313, ../../sass/styles.scss */
-.site .site__posts .mdl-card > button {
+.site .site-posts .mdl-card > button {
   position: absolute;
   top: 0;
   right: 28px;
@@ -376,7 +376,7 @@ body .site {
   transform: translate(0px, -28px);
 }
 /* line 325, ../../sass/styles.scss */
-.site .site__post .meta + .mdl-card__supporting-text {
+.site .site-post .meta + .mdl-card__supporting-text {
   border: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -389,33 +389,33 @@ body .site {
   flex-direction: column;
 }
 /* line 336, ../../sass/styles.scss */
-.site .site__post .meta + .mdl-card__supporting-text ol,
-.site .site__post .meta + .mdl-card__supporting-text p,
-.site .site__post .meta + .mdl-card__supporting-text table,
-.site .site__post .meta + .mdl-card__supporting-text ul {
+.site .site-post .meta + .mdl-card__supporting-text ol,
+.site .site-post .meta + .mdl-card__supporting-text p,
+.site .site-post .meta + .mdl-card__supporting-text table,
+.site .site-post .meta + .mdl-card__supporting-text ul {
   max-width: 512px;
   margin: 16px auto;
   font-size: 16px;
   line-height: 28px;
 }
 /* line 345, ../../sass/styles.scss */
-.site .site__post .meta + .mdl-card__supporting-text table {
+.site .site-post .meta + .mdl-card__supporting-text table {
   display: block;
 }
 /* line 348, ../../sass/styles.scss */
-.site .site__post .meta + .mdl-card__supporting-text .section-recipe {
+.site .site-post .meta + .mdl-card__supporting-text .section-recipe {
   max-width: 512px;
   margin: 16px auto;
 }
 /* line 355, ../../sass/styles.scss */
-.site .site__post .entry-content p {
+.site .site-post .entry-content p {
   max-width: 512px;
   margin: 16px auto;
   font-size: 16px;
   line-height: 28px;
 }
 /* line 363, ../../sass/styles.scss */
-.site .theme-crumbs {
+.site .site-breadcrumbs {
   background-color: #EEE;
   padding: 8px 15px;
 }
