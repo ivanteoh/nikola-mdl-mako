@@ -233,7 +233,7 @@ Additional optional MDL classes for header element:
 
 ## TODO
 
-* Fix post meta
+* Fix post_header and index
 
 ## License
 
