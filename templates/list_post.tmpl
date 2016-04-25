@@ -3,22 +3,27 @@
 
 <%block name="content">
 <div class="site__page theme-card mdl-grid">
-    <div class="mdl-card mdl-cell mdl-cell--12-col">
-        <article class="listpage">
+    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+        <article class="list-post">
+            <div class="mdl-card__media"></div>
             <div class="mdl-card__title">
                 <header>
                     <h1>${title|h}</h1>
                 </header>
             </div>
-            %if posts:
-            <ul class="postlist">
-            % for post in posts:
-                <li><time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time><a href="${post.permalink()}" class="listtitle">${post.title()|h}</a></li>
-            % endfor
-            </ul>
-            %else:
-            <p>${messages("No posts found.")}</p>
-            %endif
+            <div class="mdl-grid mdl-color-text--grey-700 mdl-card__supporting-text">
+                <div class="mdl-cell mdl-cell--12-col">
+                    %if posts:
+                    <ul class="mdl-list list-post-items">
+                    % for post in posts:
+                        <li class="mdl-list__item"><time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time><a href="${post.permalink()}" class="listtitle">${post.title()|h}</a></li>
+                    % endfor
+                    </ul>
+                    %else:
+                    <p>${messages("No posts found.")}</p>
+                    %endif
+                </div>
+            </div>
         </article>
     </div>
 </div>

@@ -3,26 +3,29 @@
 
 <%block name="content">
 <div class="site__page theme-card mdl-grid">
-    <div class="mdl-card mdl-cell mdl-cell--12-col">
-        <article class="listpage">
+    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+        <article class="list-page">
+            <div class="mdl-card__media"></div>
             <div class="mdl-card__title">
                 <header>
                     <h1>${title|h}</h1>
                 </header>
             </div>
-            <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-                %if items:
-                <ul class="postlist">
-                  % for text, link, count in items:
-                      <li><a href="${link}">${text|h}</a>
-                      % if count:
-                          (${count})
-                      % endif
-                  % endfor
-                </ul>
-                %else:
-                <p>${messages("Nothing found.")}</p>
-                %endif
+            <div class="mdl-grid mdl-color-text--grey-700 mdl-card__supporting-text">
+                <div class="mdl-cell mdl-cell--12-col">
+                    %if items:
+                    <ul class="mdl-list list-page-items">
+                      % for text, link, count in items:
+                          <li class="mdl-list__item"><a href="${link}">${text|h}</a>
+                          % if count:
+                              (${count})
+                          % endif
+                      % endfor
+                    </ul>
+                    %else:
+                    <p>${messages("Nothing found.")}</p>
+                    %endif
+                </div>
             </div>
         </article>
     </div>

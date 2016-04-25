@@ -15,8 +15,9 @@
 
 <%block name="content">
 <div class="site__page theme-card mdl-grid">
-    <div class="mdl-card mdl-cell mdl-cell--12-col">
-        <article class="tagpage">
+    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+        <article class="tag-page">
+            <div class="mdl-card__media"></div>
             <div class="mdl-card__title">
                 <header>
                     <h1>${title|h}</h1>
@@ -30,9 +31,9 @@
             %if subcategories:
             <div class="mdl-color-text--grey-700 mdl-card__supporting-text subcategories">
                 ${messages('Subcategories:')}
-                <ul>
+                <ul class="mdl-list tag-page-subcategories">
                     %for name, link in subcategories:
-                    <li><a href="${link}">${name|h}</a></li>
+                    <li class="mdl-list__item"><a href="${link}">${name|h}</a></li>
                     %endfor
                 </ul>
             </div>
@@ -48,14 +49,16 @@
                     <p class="feedlink"><a class="logo-rss" href="${_link(kind + "_rss", tag)}" type="application/rss+xml">${messages('RSS feed')}</a></p>
                 %endif
             </div>
-            <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-                %if posts:
-                <ul class="postlist">
-                % for post in posts:
-                    <li><time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time><a href="${post.permalink()}" class="listtitle">${post.title()|h}<a></li>
-                % endfor
-                </ul>
-                %endif
+            <div class="mdl-grid mdl-color-text--grey-700 mdl-card__supporting-text">
+                <div class="mdl-cell mdl-cell--12-col">
+                    %if posts:
+                    <ul class="mdl-list tag-page-items">
+                    % for post in posts:
+                        <li class="mdl-list__item"><time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time><a href="${post.permalink()}" class="listtitle">${post.title()|h}<a></li>
+                    % endfor
+                    </ul>
+                    %endif
+                </div>
             </div>
         </article>
     </div>
