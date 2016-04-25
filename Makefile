@@ -1,7 +1,7 @@
-all: scss-prd
+all: prd
 
-scss-dev:
+dev:
 	sass --style expanded --line-numbers --load-path ../material-design-lite/src sass/styles.scss assets/css/styles.css
 
-scss-prd:
+prd:
 	sass --style compressed --load-path ../material-design-lite/src sass/styles.scss assets/css/styles.css
