@@ -1,5 +1,6 @@
 ## -*- coding: utf-8 -*-
 <%namespace name="helper" file="index_helper.tmpl"/>
+<%namespace name="pheader" file="post_header.tmpl"/>
 <%namespace name="comments" file="comments_helper.tmpl"/>
 <%inherit file="base.tmpl"/>
 
@@ -37,32 +38,7 @@
     ${post.text(teaser_only=False)}
     %endif
     </div>
-    <div class="mdl-card__supporting-text meta">
-        <div>
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">${"".join([x[0].upper() for x in post.author().split()])}</button></div>
-        <div>
-            <strong class="metadata byline author vcard">
-                <span class="byline-name fn">
-                % if author_pages_generated:
-                    <a href="${_link('author', post.author())}">${post.author()|h}</a>
-                % else:
-                    ${post.author()|h}
-                % endif
-                </span>
-            </strong>
-            <span class="metadata dateline">
-                <time class="published dt-published" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time>
-            </span>
-        </div>
-        <div class="section-spacer"></div>
-        % if not post.meta('nocomments') and site_has_comments:
-        <div class="meta__comment">
-            <span class="metadata commentline">
-                ${comments.comment_link(post.permalink(), post._base_path)}
-            </span>
-        </div>
-        % endif
-    </div>
+    ${pheader.html_post_metadata(post)}
     </article>
 </div>
 % endfor

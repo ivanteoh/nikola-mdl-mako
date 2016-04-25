@@ -202,8 +202,10 @@ Additional optional MDL classes for header element:
 * ``theme-blog__page`` is replaced with ``site-page``
 * ``theme-blog__listing`` is replaced with ``site-listing``
 * ``theme-card`` is replaced with ``site-card``
-* ``theme-nav`` is replaced with ``site-nav``
-* ``theme-nav__button`` is replaced with ``site-nav__button``
+* ``theme-nav`` is replaced with ``site-navigation``
+* ``theme-nav__button`` is replaced with ``site-navigation__button``
+* ``previous`` is replaced with ``site-navigation__previous``
+* ``next`` is replaced with ``site-navigation__next``
 * ``theme-crumbs`` is replaced with ``site-breadcrumbs``
 * ``searchform`` is replaced with ``site-header__search``
 
@@ -221,6 +223,13 @@ Additional optional MDL classes for header element:
 * ``site-drawer__description``
 * ``site-drawer__navigation``
 * ``site-drawer__note``
+* ``metadata``
+* ``site-post__author``
+* ``site-post__date``
+* ``site-post__total-comment``
+* ``site-post__tag``
+* ``site-post__source-link``
+* ``site-post__source-link``
 * ``site-footer``
 
 ## Known Issues

@@ -88,7 +88,7 @@ iframe + p {
         -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
         flex-shrink: 0;
-        > .site-nav {
+        > .site-navigation {
             margin: 12px 15px;
             display: -webkit-box;
             display: -webkit-flex;
@@ -111,7 +111,7 @@ iframe + p {
             .mdl-button {
                 color: rgba(0,0,0,0.54);
             }
-            > .site-nav__button {
+            > .site-navigation__button {
                 &:first-child .mdl-button {
                     margin-right: 16px;
                 }
@@ -160,7 +160,6 @@ iframe + p {
         -webkit-align-items: stretch;
         -ms-flex-align: stretch;
         align-items: stretch;
-        min-height: 360px;
         > a {
             color: inherit;
             font-weight: inherit;
@@ -254,7 +253,7 @@ iframe + p {
         -ms-flex-positive: 1;
         flex-grow: 1;
     }
-    .meta {
+/*    .meta {
         box-sizing: border-box;
         padding: 16px;
         display: -webkit-box;
@@ -304,7 +303,7 @@ iframe + p {
             -ms-flex-direction: column;
             flex-direction: column;
         }
-    }
+    } */
     .site-posts {
         .mdl-card {
             overflow: visible;
@@ -473,4 +472,14 @@ iframe + p {
 .book-figure-book-number,
 .book-figure-review {
     margin: 0 0 10px;
+}
+/* metadata */
+.site-post__author {
+    font-weight: bold;
+}
+.site-post__tag {
+    margin: 0px 5px;
+}
+.no-margin-bottom {
+    margin-bottom: 0;
 }
