@@ -14,7 +14,7 @@
                     %if posts:
                     <ul class="mdl-list list-post-items">
                     % for post in posts:
-                        <li class="mdl-list__item"><time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time><a href="${post.permalink()}" class="listtitle">${post.title()|h}</a></li>
+                        <li class="mdl-list__item"><time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time><a href="${post.permalink()}" class="post-title">${post.title()|h}</a></li>
                     % endfor
                     </ul>
                     %else:

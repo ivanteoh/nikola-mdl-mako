@@ -37,7 +37,12 @@
                 <ul class="mdl-cell mdl-cell--12-col mdl-list tag-index-tags">
                 % for text, link in items:
                     % if text not in hidden_tags:
-                        <li class="mdl-list__item"><a class="reference listtitle" href="${link}">${text|h}</a></li>
+                        <li class="mdl-list__item">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-avatar">label</i>
+                                <a class="reference post-title" href="${link}">${text|h}</a>
+                            </span>
+                        </li>
                     % endif
                 % endfor
                 </ul>
