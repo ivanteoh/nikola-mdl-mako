@@ -8,49 +8,62 @@
 <div class="site-gallery site-card mdl-grid">
     <div class="mdl-cell mdl-cell--12-col">
         ${ui.bar(crumbs)}
+    </div>
+    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+        <div class="mdl-card__media"></div>
         %if title:
-        <h1>${title|h}</h1>
-        %endif
-        %if post:
-        <p>
-            ${post.text()}
-        </p>
-        %endif
-        %if folders:
-        <ul>
-        % for folder, ftitle in folders:
-            <li><a href="${folder}"><i
-            class="icon-folder-open"></i>&nbsp;${ftitle|h}</a></li>
-        % endfor
-        </ul>
-        %endif
-        %if photo_array:
-        <div class="mdl-grid image-gallery">
-            %for image in photo_array:
-                <div class="mdl-card mdl-cell mdl-cell--3-col mdl-shadow--2dp">
-                    <div class="mdl-card__media mdl-color--white">
-                        %if image_plugin and image_plugin == 'lightbox':
-                        <a href="${image['url']}" data-lightbox="image-gallery"
-                           data-title="${image['title']}"
-                           class="thumbnail image-reference"
-                           title="${image['title']}">
-                            <img src="${image['url_thumb']}" alt="${image['title']|h}" />
-                        </a>
-                        %else:
-                        <a href="${image['url']}" class="thumbnail image-reference" title="${image['title']}">
-                            <img src="${image['url_thumb']}" alt="${image['title']|h}" />
-                        </a>
-                        %endif
-                    </div>
-                    <div class="mdl-card__actions">
-                      <a class="mdl-button mdl-js-button mdl-js-ripple-effect" title="${image['title']}" href="${image['url']}">${image['title']}</a>
-                    </div>
-                </div>
-            %endfor
+        <div class="mdl-card__title">
+            <header>
+                <h1>${title|h}</h1>
+            </header>
         </div>
         %endif
+        <div class="mdl-grid mdl-color-text--grey-700 mdl-card__supporting-text">
+            <div class="mdl-cell mdl-cell--12-col">
+                %if post:
+                <p>
+                    ${post.text()}
+                </p>
+                %endif
+                %if folders:
+                <ul class="mdl-list">
+                % for folder, ftitle in folders:
+                    <li class="mdl-list__item"><a href="${folder}"><i
+                    class="icon-folder-open"></i>&nbsp;${ftitle|h}</a></li>
+                % endfor
+                </ul>
+                %endif
+                %if photo_array:
+                <div class="mdl-grid image-gallery">
+                    %for image in photo_array:
+                        <div class="mdl-card mdl-cell mdl-cell--3-col mdl-shadow--2dp">
+                            <div class="mdl-card__media mdl-color--white">
+                                %if image_plugin and image_plugin == 'lightbox':
+                                <a href="${image['url']}" data-lightbox="image-gallery"
+                                   data-title="${image['title']}"
+                                   class="thumbnail image-reference"
+                                   title="${image['title']}">
+                                    <img src="${image['url_thumb']}" alt="${image['title']|h}" />
+                                </a>
+                                %else:
+                                <a href="${image['url']}" class="thumbnail image-reference" title="${image['title']}">
+                                    <img src="${image['url_thumb']}" alt="${image['title']|h}" />
+                                </a>
+                                %endif
+                            </div>
+                            <div class="mdl-card__actions">
+                              <a class="mdl-button mdl-js-button mdl-js-ripple-effect" title="${image['title']}" href="${image['url']}">${image['title']}</a>
+                            </div>
+                        </div>
+                    %endfor
+                </div>
+                %endif
+            </div>
+        </div>
         %if site_has_comments and enable_comments:
+        <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments hidden-print">
             ${comments.comment_form(None, permalink, title)}
+        </div>
         %endif
     </div>
 </div>
