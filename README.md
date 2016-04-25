@@ -47,7 +47,7 @@ Here are the components that used in this theme
 * Grid (mdl-grid) on site grid
 * Footer (mdl-mega-footer or mdl-mini-footer)
 * List (mdl-list)
-* Menus (mdl-menu) on tags menu and more button in navigation
+* Menus (mdl-menu) on more button in navigation
 * Text Fields (mdl-textfield) not in the theme but you might need it on search
   box
 * Tooltips (mdl-tooltip) not in the theme but you might need it on search box

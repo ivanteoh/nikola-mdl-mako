@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3 (unreleased)
+0.3 (2016-04-26)
 ------------------
 
 - Update the default MDL version to 1.1.3.
