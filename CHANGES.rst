@@ -13,6 +13,8 @@ Changelog
   [ivanteoh]
 - Pregenerate `styles.css` for easy theme installation.
   [ivanteoh]
+- Tidy up the layout and style classes.
+  [ivanteoh]
 
 0.2 (2015-11-09)
 ----------------
