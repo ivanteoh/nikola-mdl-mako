@@ -9,26 +9,24 @@
             <div class="mdl-card__title">
                 <h2 class="mdl-card__title-text">${title|h}</h2>
             </div>
-            <div class="mdl-grid mdl-card__supporting-text">
-                <div class="mdl-cell mdl-cell--12-col">
-                    %if posts:
-                    <ul class="mdl-list list-post-items">
-                    % for post in posts:
-                        <li class="mdl-list__item mdl-list__item--two-line">
-                            <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-avatar">subject</i>
-                                <a href="${post.permalink()}" class="post-title">${post.title()|h}</a>
-                                <span class="mdl-list__item-sub-title">
-                                    <time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time>
-                                </span>
+            <div class="mdl-card__supporting-text">
+                %if posts:
+                <ul class="mdl-list list-post-items">
+                % for post in posts:
+                    <li class="mdl-list__item mdl-list__item--two-line">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">subject</i>
+                            <a href="${post.permalink()}" class="post-title">${post.title()|h}</a>
+                            <span class="mdl-list__item-sub-title">
+                                <time class="listdate" datetime="${post.formatted_date('webiso')}" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time>
                             </span>
-                        </li>
-                    % endfor
-                    </ul>
-                    %else:
-                    <p>${messages("No posts found.")}</p>
-                    %endif
-                </div>
+                        </span>
+                    </li>
+                % endfor
+                </ul>
+                %else:
+                <p>${messages("No posts found.")}</p>
+                %endif
             </div>
         </article>
     </div>

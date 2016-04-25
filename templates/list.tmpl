@@ -9,30 +9,28 @@
             <div class="mdl-card__title">
                 <h2 class="mdl-card__title-text">${title|h}</h2>
             </div>
-            <div class="mdl-grid mdl-card__supporting-text">
-                <div class="mdl-cell mdl-cell--12-col">
-                    %if items:
-                    <ul class="mdl-list list-page-items">
-                    % for text, link, count in items:
-                        <li class="mdl-list__item mdl-list__item--two-line">
-                            <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-avatar">archive</i>
-                                <a href="${link}">${text|h}</a>
-                                <span class="mdl-list__item-sub-title">Total:
-                                    %if count:
-                                        <span>${count}</span>
-                                    %else:
-                                        <span>0</span>
-                                    % endif
-                                </span>
+            <div class="mdl-card__supporting-text">
+                %if items:
+                <ul class="mdl-list list-page-items">
+                % for text, link, count in items:
+                    <li class="mdl-list__item mdl-list__item--two-line">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">archive</i>
+                            <a href="${link}">${text|h}</a>
+                            <span class="mdl-list__item-sub-title">Total:
+                                %if count:
+                                    <span>${count}</span>
+                                %else:
+                                    <span>0</span>
+                                % endif
                             </span>
-                        </li>
-                    % endfor
-                    </ul>
-                    %else:
-                    <p>${messages("Nothing found.")}</p>
-                    %endif
-                </div>
+                        </span>
+                    </li>
+                % endfor
+                </ul>
+                %else:
+                <p>${messages("Nothing found.")}</p>
+                %endif
             </div>
         </article>
     </div>
