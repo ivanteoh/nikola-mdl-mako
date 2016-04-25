@@ -240,10 +240,6 @@ Additional optional MDL classes for header element:
 * ``THEME_COLOR`` is not used regardless the value
 * Not meet WCAG 2.0 level AA
 
-## TODO
-
-* Fix post_header and index
-
 ## License
 
 Material Design Lite [Apache License Version 2.0]
