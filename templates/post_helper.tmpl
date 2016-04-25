@@ -29,7 +29,7 @@
 
 <%def name="html_pager(post)">
     %if post.prev_post or post.next_post:
-        <nav class="site-nav hidden-print pager mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+        <nav class="site-nav hidden-print pager mdl-cell mdl-cell--12-col">
             %if post.prev_post:
                 <a href="${post.prev_post.permalink()}" class="site-nav__button previous" rel="prev" title="${post.prev_post.title()|h}">
                   <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">

@@ -30,14 +30,14 @@
         <h2 class="mdl-card__title-text p-name entry-title"><a href="${post.permalink()}" class="u-url">${post.title()|h}</a></h2>
     </div>
     %if index_teasers:
-    <div class="mdl-color-text--grey-700 mdl-card__supporting-text p-summary entry-summary">
+    <div class="mdl-card__supporting-text p-summary entry-summary">
     ${post.text(teaser_only=True)}
     %else:
-    <div class="mdl-color-text--grey-700 mdl-card__supporting-text e-content entry-content">
+    <div class="mdl-card__supporting-text e-content entry-content">
     ${post.text(teaser_only=False)}
     %endif
     </div>
-    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    <div class="mdl-card__supporting-text meta">
         <div>
           <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored mdl-js-ripple-effect">${"".join([x[0].upper() for x in post.author().split()])}</button></div>
         <div>

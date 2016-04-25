@@ -11,7 +11,7 @@
             <div class="mdl-card__media"></div>
             ${pheader.html_title()}
             ${pheader.html_translations(post)}
-            <div class="mdl-color-text--grey-700 mdl-card__supporting-text e-content entry-content" itemprop="articleBody text">
+            <div class="mdl-card__supporting-text e-content entry-content" itemprop="articleBody text">
                 ${post.text()}
             </div>
             %if site_has_comments and enable_comments and not post.meta('nocomments'):

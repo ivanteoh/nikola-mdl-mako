@@ -22,12 +22,12 @@
                 <h2 class="mdl-card__title-text">${title|h}</h2>
             </div>
             %if description:
-            <div class="mdl-color-text--grey-700 mdl-card__supporting-text description">
+            <div class="mdl-card__supporting-text description">
                 <p>${description}</p>
             </div>
             %endif
             %if subcategories:
-            <div class="mdl-color-text--grey-700 mdl-card__supporting-text subcategories">
+            <div class="mdl-card__supporting-text subcategories">
                 ${messages('Subcategories:')}
                 <ul class="mdl-list tag-page-subcategories">
                     %for name, link in subcategories:
@@ -36,7 +36,7 @@
                 </ul>
             </div>
             %endif
-            <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+            <div class="mdl-card__supporting-text meta">
                 %if len(translations) > 1 and generate_rss:
                     %for language in sorted(translations):
                     <p class="feedlink">
@@ -47,7 +47,7 @@
                     <p class="feedlink"><a class="logo-rss" href="${_link(kind + "_rss", tag)}" type="application/rss+xml">${messages('RSS feed')}</a></p>
                 %endif
             </div>
-            <div class="mdl-grid mdl-color-text--grey-700 mdl-card__supporting-text">
+            <div class="mdl-card__supporting-text">
                 <div class="mdl-cell mdl-cell--12-col">
                     %if posts:
                     <ul class="mdl-list tag-page-items">
