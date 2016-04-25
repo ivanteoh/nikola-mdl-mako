@@ -36,25 +36,7 @@
                 </ul>
             </div>
             %endif
-            <div class="mdl-card__supporting-text meta">
-                %if len(translations) > 1 and generate_rss:
-                    %for language in sorted(translations):
-                    <p class="feedlink">
-                        <a href="${_link(kind + "_rss", tag, language)}" hreflang="${language}" type="application/rss+xml">
-                            <i class="material-icons">rss_feed</i>
-                            <span>${messages('RSS feed', language)} (${language})</span>
-                        </a>
-                    </p>
-                    %endfor
-                %elif generate_rss:
-                    <p class="feedlink">
-                        <a href="${_link(kind + "_rss", tag)}" type="application/rss+xml">
-                            <i class="material-icons">rss_feed</i>
-                            <span>${messages('RSS feed')}</span>
-                        </a>
-                    </p>
-                %endif
-            </div>
+
             <div class="mdl-card__supporting-text">
                 <div class="mdl-cell mdl-cell--12-col">
                     %if posts:
@@ -73,6 +55,15 @@
                     </ul>
                     %endif
                 </div>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                %if len(translations) > 1 and generate_rss:
+                    %for language in sorted(translations):
+                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--accent" title="${messages('RSS feed', language)} (${language})" href="${_link(kind + "_rss", tag, language)}" hreflang="${language}" type="application/rss+xml">${messages('RSS feed', language)} (${language})</a>
+                    %endfor
+                %elif generate_rss:
+                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--accent" title="${messages('RSS feed')}" href="${_link(kind + "_rss", tag)}" type="application/rss+xml">${messages('RSS feed')}</a>
+                %endif
             </div>
         </article>
     </div>

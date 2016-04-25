@@ -235,7 +235,7 @@ Additional optional MDL classes for header element:
 ## Known Issues
 
 * Not all features of Nikola are tested
-* ``slider`` is not working
+* ``slideshow`` is not working
 * Submenus in navigation links are not supported
 * ``THEME_COLOR`` is not used regardless the value
 * Not meet WCAG 2.0 level AA

@@ -9,9 +9,9 @@
             <div class="mdl-card__title">
                 <h2 class="mdl-card__title-text">${title|h}</h2>
             </div>
-            <div class="mdl-card__supporting-text">
+            <div class="mdl-grid mdl-card__supporting-text">
                 %if items:
-                <ul class="mdl-list list-page-items">
+                <ul class="mdl-card mdl-cell mdl-cell--12-col mdl-list list-page-items">
                 % for text, link, count in items:
                     <li class="mdl-list__item mdl-list__item--two-line">
                         <span class="mdl-list__item-primary-content">
@@ -19,10 +19,11 @@
                             <a href="${link}">${text|h}</a>
                             <span class="mdl-list__item-sub-title">Total:
                                 %if count:
-                                    ${count}
+                                    <span>${count}</span>
                                 %else:
-                                    0
+                                    <span>0</span>
                                 % endif
+                                    post(s)
                             </span>
                         </span>
                     </li>
