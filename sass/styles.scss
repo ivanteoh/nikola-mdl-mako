@@ -337,7 +337,6 @@ iframe + p {
                 p,
                 table,
                 ul {
-                    max-width: 512px;
                     margin: 16px auto;
                     font-size: 16px;
                     line-height: 28px;
@@ -346,14 +345,12 @@ iframe + p {
                     display: block;
                 }
                 .section-recipe {
-                    max-width: 512px;
                     margin: 16px auto;
                 }
             }
         }
         .entry-content {
             p {
-                max-width: 512px;
                 margin: 16px auto;
                 font-size: 16px;
                 line-height: 28px;

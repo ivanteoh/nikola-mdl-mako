@@ -12,12 +12,12 @@
 
 <%def name="html_tags(post)">
     %if post.tags:
-        <button id="posttags"
+        <button id="post-tags"
                 class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
             <i class="material-icons">more_vert</i>
         </button>
         <ul itemprop="keywords" class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect tags"
-            for="posttags">
+            for="post-tags">
             %for tag in post.tags:
               % if tag not in hidden_tags:
                 <li class="mdl-menu__item"><a class="tag p-category" href="${_link('tag', tag)}" rel="tag">${tag|h}</a></li>
