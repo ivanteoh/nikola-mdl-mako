@@ -15,6 +15,8 @@ Changelog
   [ivanteoh]
 - Tidy up the layout and style classes.
   [ivanteoh]
+- Replace RSS logo from material-icons.
+  [ivanteoh]
 
 0.2 (2015-11-09)
 ----------------
