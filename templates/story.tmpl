@@ -7,12 +7,12 @@
 <%block name="content">
 <div class="site-page site-card mdl-grid site-page-story">
     <div class="mdl-card mdl-cell mdl-cell--12-col
-    %if post.meta('type'):
-        site-page-story-${post.meta('type')}
-    %endif
-    %if not post.meta('no-card-shadow'):
-        mdl-shadow--4dp
-    %endif
+%if post.meta('type'):
+    site-page-story-${post.meta('type')}
+%endif
+%if not post.meta('no-card-shadow'):
+    mdl-shadow--4dp
+%endif
     ">
         <article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
             %if not post.meta('no-card-media'):
