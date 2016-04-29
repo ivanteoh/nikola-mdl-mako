@@ -3,6 +3,7 @@ Changelog
 
 0.3.1 (unreleased)
 ------------------
+
 - Add meta 'type' and 'hidetitle' to 'story' page.
   [ivanteoh]
 - Add meta 'no-card-shadow' and 'no-card-media' to 'post' and 'story' pages.
