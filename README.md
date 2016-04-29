@@ -230,6 +230,11 @@ Additional optional MDL classes for header element:
 * ``site-post__tag``
 * ``site-post__source-link``
 * ``site-post__source-link``
+* ``site-page-list``
+* ``site-page-list-post``
+* ``site-page-story``
+* ``site-page-tags``
+* ``site-page-tag``
 * ``site-footer``
 
 ## Known Issues

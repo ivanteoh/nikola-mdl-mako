@@ -1,8 +1,15 @@
 Changelog
 =========
 
-0.3 (2016-04-26)
+0.3.1 (unreleased)
 ------------------
+- Add meta 'type' to story page as well.
+  [ivanteoh]
+- Add different classes to different page templates.
+  [ivanteoh]
+
+0.3 (2016-04-26)
+----------------
 
 - Update the default MDL version to 1.1.3.
   [ivanteoh]

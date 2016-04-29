@@ -5,7 +5,11 @@
 <%inherit file="post.tmpl"/>
 
 <%block name="content">
-<div class="site-page site-card mdl-grid">
+<div class="site-page site-card mdl-grid site-page-story
+%if post.meta('type'):
+    site-page-story-${post.meta('type')}
+%endif
+">
     <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
         <article class="storypage" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="mdl-card__media"></div>
