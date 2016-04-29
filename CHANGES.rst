@@ -3,9 +3,9 @@ Changelog
 
 0.3.1 (unreleased)
 ------------------
-- Add meta 'type' to story page as well.
+- Add meta 'type' and 'hidetitle' to 'story' page.
   [ivanteoh]
-- Add different classes to different page templates.
+- Add meta 'no-card-shadow' and 'no-card-media' to 'post' and 'story' pages.
   [ivanteoh]
 
 0.3 (2016-04-26)

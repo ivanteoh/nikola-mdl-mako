@@ -185,6 +185,8 @@ Additional optional MDL classes for header element:
   [Nikola](https://getnikola.com/) used. If it is ``lightbox``,
   [lightbox](http://lokeshdhakar.com/projects/lightbox2/) script is used to view
   full images in gallery pages.
+* Add meta 'type' and 'hidetitle' to 'story' page.
+* Add meta 'no-card-shadow' and 'no-card-media' to 'post' and 'story' pages.
 
 ## Depreciated GLOBAL_CONTEXT
 
