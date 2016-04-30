@@ -8,6 +8,8 @@ Changelog
   [ivanteoh]
 - Add meta 'no-card-shadow' and 'no-card-media' to 'post' and 'story' pages.
   [ivanteoh]
+- Fix the header orders.
+  [ivanteoh]
 
 0.3 (2016-04-26)
 ----------------
