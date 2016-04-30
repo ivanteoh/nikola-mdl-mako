@@ -5,7 +5,8 @@
 <%def name="html_title()">
 %if title and not post.meta('hidetitle'):
     <div class="mdl-card__title">
-        <h1 class="mdl-card__title-text p-name entry-title" itemprop="headline name"><a href="${post.permalink()}" class="u-url">${post.title()|h}</a></h1>
+        <h1 class="mdl-card__title-text p-name entry-title"
+            itemprop="headline name">${post.title()|h}</h1>
     </div>
 %endif
 </%def>
