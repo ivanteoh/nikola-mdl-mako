@@ -247,6 +247,13 @@ Additional optional MDL classes for header element:
 * ``THEME_COLOR`` is not used regardless the value
 * Not meet WCAG 2.0 level AA
 
+## Dependencies
+
+* [Material Design Lite] (https://getmdl.io)
+* [jQuery] (https://jquery.org)
+* [Colorbox] (http://www.jacklmoore.com/colorbox)
+* [Lightbox] (http://lokeshdhakar.com/projects/lightbox2)
+
 ## License
 
 Material Design Lite [Apache License Version 2.0]

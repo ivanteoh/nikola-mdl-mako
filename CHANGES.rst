@@ -16,6 +16,8 @@ Changelog
   [ivanteoh]
 - Update the Lightbox version to 2.9.0.
   [ivanteoh]
+- Update the jQuery version to 3.1.1.
+  [ivanteoh]
 
 0.3 (2016-04-26)
 ----------------
