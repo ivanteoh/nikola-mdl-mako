@@ -10,7 +10,9 @@ Changelog
   [ivanteoh]
 - Fix the header orders.
   [ivanteoh]
-- Update the default MDL version to 1.3.0.
+- Update the MDL version to 1.3.0 as default.
+  [ivanteoh]
+- Update the Colorbox version to 1.6.4.
   [ivanteoh]
 
 0.3 (2016-04-26)
