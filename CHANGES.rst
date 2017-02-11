@@ -10,6 +10,8 @@ Changelog
   [ivanteoh]
 - Fix the header orders.
   [ivanteoh]
+- Update the default MDL version to 1.3.0.
+  [ivanteoh]
 
 0.3 (2016-04-26)
 ----------------
