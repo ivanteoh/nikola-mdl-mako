@@ -4,6 +4,10 @@ body:after {
   display: none;
 }
 
+body.lb-disable-scrolling {
+  overflow: hidden;
+}
+
 .lightboxOverlay {
   position: absolute;
   top: 0;
@@ -29,11 +33,11 @@ body:after {
   display: block;
   height: auto;
   max-width: inherit;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  max-height: none;
   border-radius: 3px;
+
+  /* Image border */
+  border: 4px solid white;
 }
 
 .lightbox a img {
@@ -42,26 +46,21 @@ body:after {
 
 .lb-outerContainer {
   position: relative;
-  background-color: white;
   *zoom: 1;
   width: 250px;
   height: 250px;
   margin: 0 auto;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px;
+
+  /* Background color behind image.
+     This is visible during transitions. */
+  background-color: white;
 }
 
 .lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
-}
-
-.lb-container {
-  padding: 4px;
 }
 
 .lb-loader {
@@ -177,6 +176,10 @@ body:after {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+  color: #4ae;
 }
 
 .lb-data .lb-number {

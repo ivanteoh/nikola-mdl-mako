@@ -14,6 +14,8 @@ Changelog
   [ivanteoh]
 - Update the Colorbox version to 1.6.4.
   [ivanteoh]
+- Update the Lightbox version to 2.9.0.
+  [ivanteoh]
 
 0.3 (2016-04-26)
 ----------------
