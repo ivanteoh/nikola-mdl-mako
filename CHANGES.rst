@@ -4,6 +4,9 @@ Changelog
 0.3.2 (unreleased)
 ------------------
 
+- Defer external CSS and JavaScript files.
+  [ivanteoh]
+
 0.3.1 (2017-02-11)
 ------------------
 
