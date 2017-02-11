@@ -10,6 +10,8 @@ Changelog
   [ivanteoh]
 - Fix the header orders.
   [ivanteoh]
+- Fix the footer height.
+  [ivanteoh]
 - Update the MDL version to 1.3.0 as default.
   [ivanteoh]
 - Update the Colorbox version to 1.6.4.
