@@ -36,13 +36,12 @@ lang="${lang}">
     %endif
 
     %if mdl__roboto_font:
-        <link defer rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en"
-              type="text/css">
+        <link rel="stylesheet" type="text/css"
+              href="/assets/vendor/mdl/css/roboto.css">
     %endif
     ${html_stylesheets()}
-    <link defer rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css"
+          href="/assets/vendor/mdl/css/material-icons.css">
 
     ${html_feedlinks()}
     <link rel="canonical" href="${abs_link(permalink)}">
@@ -75,7 +74,7 @@ lang="${lang}">
         </script>
     %else:
         <script defer type="text/javascript"
-            src="/assets/vendor/mdl/material.min.js">
+            src="/assets/vendor/mdl/js/material.min.js">
         </script>
     %endif
     <script async type="text/javascript"
