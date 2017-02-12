@@ -62,6 +62,7 @@ values except ``post_type``, where is ``{}``:
         "mdl__version": "1.3.0",
         "mdl__color_scheme": "indigo-pink",
         "mdl__roboto_font": False,
+        "mdl__late_load_css": False,
         "mdl__fixed_header": False,
         "mdl__fixed_drawer": False,
         "mdl__no_drawer_button": False,
@@ -100,6 +101,8 @@ values except ``post_type``, where is ``{}``:
   ``Material Design Lite``
 * ``mdl__roboto_font`` is a flag whether Roboto font is used, refer to
   [styles documentation](http://www.getmdl.io/styles/index.html)
+* ``mdl__late_load_css`` is a flag whether CSS styles are deferred, refer to
+  [Optimize CSS Delivery](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery)
 
 ### Layout
 

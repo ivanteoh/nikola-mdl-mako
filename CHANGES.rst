@@ -6,6 +6,10 @@ Changelog
 
 - Defer external CSS and JavaScript files.
   [ivanteoh]
+- Offline MDL JavaScript files.
+  [ivanteoh]
+- 'mdl__late_load_css' option for page speed.
+  [ivanteoh]
 
 0.3.1 (2017-02-11)
 ------------------
