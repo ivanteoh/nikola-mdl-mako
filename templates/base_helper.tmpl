@@ -88,11 +88,11 @@ lang="${lang}">
     %endif
     %if image_plugin and image_plugin == 'colorbox':
         <script defer type="text/javascript"
-            src="/assets/colorbox/js/jquery.colorbox-min.js">
+            src="/assets/vendor/colorbox/js/jquery.colorbox-min.js">
         </script>
         %if colorbox_locales[lang]:
             <script defer type="text/javascript"
-                src="/assets/colorbox/js/colorbox-i18n/jquery.colorbox-${colorbox_locales[lang]}.js">
+                src="/assets/vendor/colorbox/js/colorbox-i18n/jquery.colorbox-${colorbox_locales[lang]}.js">
             </script>
         %endif
     %endif
@@ -118,11 +118,11 @@ lang="${lang}">
         %endif
     %endif
     %if image_plugin and image_plugin == 'lightbox':
-        <link href="/assets/lightbox/css/lightbox.css" rel="stylesheet"
+        <link href="/assets/vendor/lightbox/css/lightbox.min.css" rel="stylesheet"
             type="text/css">
     %endif
     %if image_plugin and image_plugin == 'colorbox':
-        <link href="/assets/colorbox/css/colorbox.css" rel="stylesheet"
+        <link href="/assets/vendor/colorbox/css/colorbox.min.css" rel="stylesheet"
             type="text/css">
     %endif
     %if use_bundles:
