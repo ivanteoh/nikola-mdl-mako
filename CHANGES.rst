@@ -10,6 +10,8 @@ Changelog
   [ivanteoh]
 - 'mdl__late_load_css' option for page speed.
   [ivanteoh]
+- 'mdl__cachebusting' option for versioning CSS and JavaScript files.
+  [ivanteoh]
 
 0.3.1 (2017-02-11)
 ------------------

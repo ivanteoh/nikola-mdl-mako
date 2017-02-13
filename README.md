@@ -63,6 +63,7 @@ values except ``post_type``, where is ``{}``:
         "mdl__color_scheme": "indigo-pink",
         "mdl__roboto_font": False,
         "mdl__late_load_css": False,
+        "mdl__cachebusting": time.time(),
         "mdl__fixed_header": False,
         "mdl__fixed_drawer": False,
         "mdl__no_drawer_button": False,
@@ -103,6 +104,7 @@ values except ``post_type``, where is ``{}``:
   [styles documentation](http://www.getmdl.io/styles/index.html)
 * ``mdl__late_load_css`` is a flag whether CSS styles are deferred, refer to
   [Optimize CSS Delivery](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery)
+* ``mdl__cachebusting`` is a flag solving the cache problem for CSS and JavaScript files.
 
 ### Layout
 
