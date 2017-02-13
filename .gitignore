@@ -61,3 +61,6 @@ target/
 
 # SASS
 .sass-cache
+
+# Project config
+.vscode

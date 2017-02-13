@@ -64,8 +64,7 @@ lang="${lang}">
 </%def>
 
 <%def name="late_load_css()">
-    ${preload_stylesheets()}
-    <noscript>
+    <noscript id="deferred-styles">
         ${html_stylesheets()}
     </noscript>
 </%def>
@@ -264,6 +263,9 @@ lang="${lang}">
         </script>
         <script async type="text/javascript"
             src="/assets/vendor/loadcss/onloadcss.js">
+        </script>
+        <script async type="text/javascript"
+            src="/assets/js/deferred-css.js">
         </script>
     %endif
     ${helper.extra_js()}
