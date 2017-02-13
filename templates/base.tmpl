@@ -32,17 +32,11 @@ mdl-layout--no-desktop-drawer-button
             ${footer.html_footer()}
          </main>
     </div>
-    ${base.late_load_js()}
-    %if image_plugin and image_plugin == 'colorbox':
-        <script defer type="text/javascript"
-            src="/assets/js/colorbox-custom.js">
-        </script>
-    %endif
-    <%block name="extra_js"></%block>
-    ${body_end}
-    ${template_hooks['body_end']()}
     %if mdl__late_load_css:
         ${base.late_load_css()}
     %endif
+    ${base.late_load_js()}
+    ${body_end}
+    ${template_hooks['body_end']()}
 </body>
 </html>
