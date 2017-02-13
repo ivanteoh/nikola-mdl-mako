@@ -234,35 +234,35 @@ lang="${lang}">
             src="/assets/vendor/mdl/js/material.min.js">
         </script>
     %endif
-    <script async type="text/javascript"
-        src="/assets/vendor/jquery/jquery-3.1.1.slim.min.js">
+    <script defer type="text/javascript"
+        src="/assets/vendor/jquery/jquery-3.1.1.min.js">
     </script>
     %if image_plugin and image_plugin == 'lightbox':
-        <script async type="text/javascript"
+        <script defer type="text/javascript"
             src="/assets/vendor/lightbox/js/lightbox.min.js">
         </script>
     %endif
     %if image_plugin and image_plugin == 'colorbox':
-        <script async type="text/javascript"
+        <script defer type="text/javascript"
             src="/assets/vendor/colorbox/js/jquery.colorbox-min.js">
         </script>
         %if colorbox_locales[lang]:
-            <script async type="text/javascript"
+            <script defer type="text/javascript"
                 src="/assets/vendor/colorbox/js/colorbox-i18n/jquery.colorbox-${colorbox_locales[lang]}.js">
             </script>
         %endif
-        <script async type="text/javascript"
+        <script defer type="text/javascript"
             src="/assets/js/colorbox-custom.js">
         </script>
     %endif
     %if mdl__late_load_css:
-        <script async type="text/javascript"
+        <script defer type="text/javascript"
             src="/assets/vendor/loadcss/loadcss.js">
         </script>
-        <script async type="text/javascript"
+        <script defer type="text/javascript"
             src="/assets/vendor/loadcss/cssrelpreload.js">
         </script>
-        <script async type="text/javascript"
+        <script defer type="text/javascript"
             src="/assets/vendor/loadcss/onloadcss.js">
         </script>
     %endif
