@@ -64,3 +64,10 @@ target/
 
 # Project config
 .vscode
+
+# Ignore custom files
+custom.scss
+custom.css
+custom.css.map
+custom.js
+custom.tmpl

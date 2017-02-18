@@ -36,6 +36,12 @@ The css file is generated using [SASS](http://sass-lang.com/) compiler. If you
 have it installed, you can generate the final ``styles.css`` file by calling
 ``make`` as there is a ``Makefile`` that contains the generation commands.
 
+If you want to add custom styles in custom.scss or custom.css, set ``mdl__custom_css`` to ``True``. Both files are git-ignored.
+
+## JavaScript development
+
+If you want to add custom JavaScript in custom.js, set ``mdl__custom_js`` to ``True``. The custom.js file is git-ignored.
+
 ## Components
 
 Here are the components that used in this theme
@@ -77,6 +83,8 @@ values except ``post_type``, where is ``{}``:
         "mdl__footer": "",
         "mdl__navigation_large_screen_only": False,
         "mdl__drawer_small_screen_only": False,
+        "mdl__custom_css": False,
+        "mdl__custom_js": False,
         "drawer_title": "",
         "drawer_logo_url": "",
         "drawer_show_title": "",
