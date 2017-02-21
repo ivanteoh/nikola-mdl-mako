@@ -3,7 +3,7 @@ GLOBAL_CONTEXT = {
     "mdl__color_scheme": "indigo-pink",
     "mdl__roboto_font": False,
     "mdl__late_load_css": False,
-    "mdl__cachebusting": time.time(),
+    "mdl__cachebusting": "1",
     "mdl__fixed_header": False,
     "mdl__fixed_drawer": False,
     "mdl__no_drawer_button": False,
