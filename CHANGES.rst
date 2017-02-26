@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3.2 (unreleased)
+0.3.2 (2017-02-27)
 ------------------
 
 - Defer external CSS and JavaScript files.
@@ -11,6 +11,8 @@ Changelog
 - 'mdl__late_load_css' option for page speed.
   [ivanteoh]
 - 'mdl__cachebusting' option for versioning CSS and JavaScript files.
+  [ivanteoh]
+- Add 'conf.py.sample' to build the demo.
   [ivanteoh]
 
 0.3.1 (2017-02-11)
