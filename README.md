@@ -63,13 +63,13 @@ Here are the components that used in this theme
 It supports some variables in the config file (conf.py). Below are the default
 values except ``post_type``, where is ``{}``:
 
-```
+```python
     GLOBAL_CONTEXT = {
         "mdl__version": "1.3.0",
         "mdl__color_scheme": "indigo-pink",
         "mdl__roboto_font": False,
         "mdl__late_load_css": False,
-        "mdl__cachebusting": time.time(),
+        "mdl__cachebusting": "1",
         "mdl__fixed_header": False,
         "mdl__fixed_drawer": False,
         "mdl__no_drawer_button": False,
