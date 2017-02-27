@@ -14,6 +14,8 @@ Changelog
   [ivanteoh]
 - Add 'conf.py.sample' to build the demo.
   [ivanteoh]
+- Remove time.time() in GLOBAL_CONTEXT.
+  [Kwpolska]
 
 0.3.1 (2017-02-11)
 ------------------
