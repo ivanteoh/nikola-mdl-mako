@@ -262,29 +262,23 @@ Additional optional MDL classes for header element:
 
 ## Dependencies
 
-* [Material Design Lite] (https://getmdl.io)
-* [jQuery] (https://jquery.org)
-* [Colorbox] (http://www.jacklmoore.com/colorbox)
-* [Lightbox] (http://lokeshdhakar.com/projects/lightbox2)
+* [Material Design Lite](https://getmdl.io)
+* [jQuery](https://jquery.org)
+* [Colorbox](http://www.jacklmoore.com/colorbox)
+* [Lightbox](http://lokeshdhakar.com/projects/lightbox2)
 
 ## License
 
-Material Design Lite [Apache License Version 2.0]
-(https://github.com/google/material-design-lite/blob/master/LICENSE)
+Material Design Lite [Apache License Version 2.0](https://github.com/google/material-design-lite/blob/master/LICENSE)
 
-Google Material Design Icons - [Attribution 4.0 International]
-(https://github.com/google/material-design-icons/blob/master/LICENSE)
+Google Material Design Icons - [Attribution 4.0 International](https://github.com/google/material-design-icons/blob/master/LICENSE)
 
-RSS Feed Icons - [SIL Open Font License 1.1]
-(http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web)
+RSS Feed Icons - [SIL Open Font License 1.1](http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web)
 
 jQuery - [MIT License](https://jquery.org/license/)
 
-Colorbox - [MIT License]
-(http://opensource.org/licenses/mit-license.php)
+Colorbox - [MIT License](http://opensource.org/licenses/mit-license.php)
 
-Lightbox - [MIT License]
-(https://github.com/lokesh/lightbox2/blob/master/LICENSE)
+Lightbox - [MIT License](https://github.com/lokesh/lightbox2/blob/master/LICENSE)
 
-Templates - [Apache License Version 2.0]
-(https://github.com/ivanteoh/nikola-mdl-mako/blob/master/LICENSE)
+Templates - [Apache License Version 2.0](https://github.com/ivanteoh/nikola-mdl-mako/blob/master/LICENSE)
