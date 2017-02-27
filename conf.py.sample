@@ -32,7 +32,7 @@ GLOBAL_CONTEXT = {
     },
     "top_nav_header": False,
     "more_button_header": [
-        ("/mobile/", "Mobile Site", "Mobile"),
+        ("/pages/handbook.html", "Handbook", "Handbook"),
     ],
     "image_plugin": "colorbox",
 }
