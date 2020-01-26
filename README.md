@@ -1,5 +1,7 @@
 # Nikola MDL Mako Template
 
+***This repo is no longer maintained as the code is moved to https://github.com/getnikola/nikola-themes/tree/master/v7/mdl***
+
 This theme is based from [Material Design Lite](http://www.getmdl.io/)
 templates. It gets the idea from the [blog example](http://www.getmdl.io/templates/blog/index.html). This theme is for
 [Nikola](https://getnikola.com/) static site generator and used Mako templates.
